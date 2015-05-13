@@ -7,5 +7,10 @@ namespace TravelAgencyModel
 {
 	class Room
 	{
+		public Int32 BedNumber { get; set; }
+
+		public Boolean Reserved { get; set; }
+
+		public BedType Type { get; set; }
 	}
 }

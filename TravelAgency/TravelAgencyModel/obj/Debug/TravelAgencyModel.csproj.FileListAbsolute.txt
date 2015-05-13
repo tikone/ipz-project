@@ -3,3 +3,8 @@ E:\git\Новая папка\TravelAgency\TravelAgency\TravelAgencyModel\bin\Deb
 E:\git\Новая папка\TravelAgency\TravelAgency\TravelAgencyModel\obj\Debug\TravelAgencyModel.csprojResolveAssemblyReference.cache
 E:\git\Новая папка\TravelAgency\TravelAgency\TravelAgencyModel\obj\Debug\TravelAgencyModel.dll
 E:\git\Новая папка\TravelAgency\TravelAgency\TravelAgencyModel\obj\Debug\TravelAgencyModel.pdb
+E:\git\ipz-project\TravelAgency\TravelAgencyModel\bin\Debug\TravelAgencyModel.dll
+E:\git\ipz-project\TravelAgency\TravelAgencyModel\bin\Debug\TravelAgencyModel.pdb
+E:\git\ipz-project\TravelAgency\TravelAgencyModel\obj\Debug\TravelAgencyModel.csprojResolveAssemblyReference.cache
+E:\git\ipz-project\TravelAgency\TravelAgencyModel\obj\Debug\TravelAgencyModel.dll
+E:\git\ipz-project\TravelAgency\TravelAgencyModel\obj\Debug\TravelAgencyModel.pdb

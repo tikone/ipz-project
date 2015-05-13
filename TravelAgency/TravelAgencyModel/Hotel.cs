@@ -5,16 +5,15 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	class Guide
+	class Hotel
 	{
-
 		public String Name { get; set; }
 
-		public String Language { get; set; }
+		public String Address { get; set; }
 
-		public Boolean Available { get; set; }
+		public HotelType Type { get; set; }
 
-		public Int32 Phone { get; set; }
+		private HashSet<Room> m_rooms;
 
 	}
 }
