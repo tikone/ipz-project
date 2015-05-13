@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	class TestModelGenerator
+	public class TestModelGenerator
 	{
 		private TravelAgency m_travelAgency;
 
@@ -38,7 +38,9 @@ namespace TravelAgencyModel
 			);
 
 
-			m_travelAgency
+			vasia.addTour(tourVasia);
+
+			_travelAgency.addCustomer(vasia);
 
 		}
 

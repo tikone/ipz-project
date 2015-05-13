@@ -16,7 +16,7 @@ namespace TravelAgencyDemoApp
 
         private void fillTestModel()
         {
-            //TODO: add generate model filler
+			new TestModelGenerator(travelAgency);
         }
 
         private void generateModelReport()
