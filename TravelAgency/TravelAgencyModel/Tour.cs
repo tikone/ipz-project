@@ -42,13 +42,15 @@ namespace TravelAgencyModel
 
 #region constructors
 
-		Tour(
+		public Tour(
 				DateTime _dateTime
 			,	Double	_price
 			,	String _country
 			,	String _description
 			,	Int32 _amountPeople
 			,	TourType _type
+			,	Hotel _hotel
+			,	Airline _airline
 		)
 		{
 			this.Date_Time = _dateTime;
@@ -57,6 +59,9 @@ namespace TravelAgencyModel
 			this.m_description = _description;
 			this.AmountPeople = _amountPeople;
 			this.Type = _type;
+
+			this.m_hotel = _hotel;
+			this.m_airline = _airline;
 
 			m_excursions = new List<Excursion>();
 			m_tickets = new List<Ticket>();
@@ -87,8 +92,11 @@ namespace TravelAgencyModel
 
 		public void ReserveRoom( Room _room )
 		{
+			//_hotel.
 			//TODO Room.check()
-			m_rooms.Add(_room);
+			if( m_hotel.CheckReservedRoom(_room) )
+				m_rooms.Add(_room);
+
 		}
 
 #endregion

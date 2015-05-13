@@ -13,6 +13,22 @@ namespace TravelAgencyModel
 
 		public HotelType Type { get; set; }
 
+		public Hotel( String _name, String _address, HotelType _type, HashSet<Room> _rooms)
+		{
+			this.Name = _name;
+			this.Address = _address;
+			this.Type = _type;
+			this.m_rooms = _rooms;
+		}
+
+		public Boolean CheckReservedRoom( Room _room )
+		{
+			if (m_rooms.Contains(_room))
+				return _room.Reserved;
+
+			return true;
+		}
+
 		private HashSet<Room> m_rooms;
 
 	}

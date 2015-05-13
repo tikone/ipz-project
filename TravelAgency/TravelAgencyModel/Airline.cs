@@ -30,5 +30,16 @@ namespace TravelAgencyModel
 			return false;
 		}
 
+		public List<Ticket> GetAvailableTicket()
+		{
+			List<Ticket> tickets = new List<Ticket>();
+
+			foreach (var tik in m_tickets)
+				if (!tik.Reserved)
+					tickets.Add(tik);
+
+			return tickets;
+		}
+
 	}
 }
