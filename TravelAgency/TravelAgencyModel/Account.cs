@@ -8,13 +8,13 @@ namespace TravelAgencyModel
 {
     class Account
     {
-        public int ID { public get { return id; } private set; }
+        public int ID { get; private set; }
 
-        public string Login { public get { return login; } private set; }
+		public string Login { get; private set; }
 
-        public string Mail { public get { return mail; } private set; }
-    
-        public int PasswordHash { public get { return passwordHash; } private set; }
+		public string Mail { get; private set; }
+
+		public int PasswordHash { get; private set; }
 
         public Account( int _id, string _login, string _mail, int _passwordHash )
         {
