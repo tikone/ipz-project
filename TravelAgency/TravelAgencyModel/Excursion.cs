@@ -15,6 +15,15 @@ namespace TravelAgencyModel
 
 		private List<Guide> m_guides;
 
+		public Excursion( String _name, Double _price, DateTime _dateTime )
+		{
+			this.Name = _name;
+			this.Price = _price;
+			this.Date_Time = _dateTime;
+
+			m_guides = new List<Guide>();
+		}
+
 		public HashSet<String> getAvailableLanguages()
 		{
 			HashSet<String> languages = new HashSet<string>();

@@ -57,6 +57,11 @@ namespace TravelAgencyModel
 			this.m_description = _description;
 			this.AmountPeople = _amountPeople;
 			this.Type = _type;
+
+			m_excursions = new List<Excursion>();
+			m_tickets = new List<Ticket>();
+			m_rooms = new List<Room>();
+
 		}
 
 #endregion

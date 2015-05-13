@@ -8,6 +8,11 @@ namespace TravelAgencyModel
 {
     class History
     {
+		public History()
+		{
+			visitedTours = new List<Tour>();
+		}
+
         public void AddTour( Tour tour )
         {
             visitedTours.Add(tour);

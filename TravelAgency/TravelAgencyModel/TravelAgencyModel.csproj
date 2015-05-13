@@ -52,6 +52,7 @@
     <Compile Include="HotelType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room.cs" />
+    <Compile Include="TestModelGenerator.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="TicketType.cs" />
     <Compile Include="Tour.cs" />
