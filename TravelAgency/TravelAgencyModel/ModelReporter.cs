@@ -31,11 +31,11 @@ namespace TravelAgencyModel
          private void showAccount( Account _account )
         {
             output.WriteLine();
-            output.WriteLine( "\t===Account Information===" );
-            output.WriteLine( "\t\tID: " + _account.ID );
-            output.WriteLine( "\t\tLogin: " + _account.Login );
-            output.WriteLine( "\t\tMail: " + _account.Mail );
-            output.WriteLine( "\t\tPassword hash: " + _account.PasswordHash );
+            output.WriteLine( "===Account Information===" );
+            output.WriteLine( "ID: " + _account.ID );
+            output.WriteLine( "Login: " + _account.Login );
+            output.WriteLine( "Mail: " + _account.Mail );
+            output.WriteLine( "Password hash: " + _account.PasswordHash );
 
             _account.History.viewHistory( showOrderedTours );
         }
@@ -43,12 +43,12 @@ namespace TravelAgencyModel
         private void showOrderedTours( Tour _tour )
         {
             output.WriteLine();
-            output.WriteLine("\t\t===Tour Information===");
-            output.WriteLine("\t\t\tTourDescription: " + _tour.ViewInfo() );
-            output.WriteLine("\t\t\tAmountPeople: " + _tour.AmountPeople);
-            output.WriteLine("\t\t\tCountry: " + _tour.Country);
-            output.WriteLine("\t\t\tDate: " + _tour.Date_Time.ToString("d", culture) );
-            output.WriteLine("\t\t\tPrice: " + _tour.Price);
+            output.WriteLine("===Tour Information===");
+            output.WriteLine("TourDescription: " + _tour.ViewInfo() );
+            output.WriteLine("AmountPeople: " + _tour.AmountPeople);
+            output.WriteLine("Country: " + _tour.Country);
+            output.WriteLine("Date: " + _tour.Date_Time.ToString("d", culture) );
+            output.WriteLine("Price: " + _tour.Price);
         }
 
         private TextWriter output;

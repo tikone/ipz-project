@@ -14,6 +14,10 @@ namespace TravelAgencyModel
 
 			Customer vasia = new Customer(@"vasia", @"petrov");
 
+			vasia.Registrate(
+				1, @"vvv_leningrad", @"sobaka@gmail.com", 1234
+			);
+
 			DateTime dateVasia = new DateTime(2015, 5, 12);
 
 			var rooms = generateRooms();
