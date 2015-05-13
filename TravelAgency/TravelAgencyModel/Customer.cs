@@ -14,8 +14,8 @@ namespace TravelAgencyModel
 
         public Customer( string _name, string _surname )
         {
-            name = _name;
-            surname = _surname;
+			Name = _name;
+			Surname = _surname;
         }
 
         public bool IsRegistered()
@@ -46,11 +46,7 @@ namespace TravelAgencyModel
 
         }
 
-        private string name;
-
         private Account account;
-
-        private string surname;
 
     }
 }
