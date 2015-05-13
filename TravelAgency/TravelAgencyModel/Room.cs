@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	class Room
+	public class Room
 	{
 		public Int32 BedNumber { get; set; }
 

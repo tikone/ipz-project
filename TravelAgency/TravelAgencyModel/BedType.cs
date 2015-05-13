@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	enum BedType
+	public enum BedType
 	{
 			Single
 		,	Double

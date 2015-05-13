@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	class Excursion
+	public class Excursion
 	{
 		public String Name { get; set; }
 

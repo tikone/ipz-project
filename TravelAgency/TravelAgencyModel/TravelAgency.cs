@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace TravelAgencyModel
 {
-    class TravelAgency
+    public class TravelAgency
     {
         public TravelAgency()
         {
             customers = new List<Customer>();
         }
 
-        public void AddCustomer( Customer _customer)
+        public void addCustomer( Customer _customer)
         {
             customers.Add(_customer);
         }
 
-        public void ForEachCustomer( Action< Customer > _function )
+        public void forEachCustomer( Action< Customer > _function )
         {
             foreach (var customer in customers)
                 _function(customer);

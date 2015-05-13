@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	class Ticket
+	public class Ticket
 	{
 		public DateTime Departure { get; set; }
 

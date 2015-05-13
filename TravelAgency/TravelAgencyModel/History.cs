@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TravelAgencyModel
 {
-    class History
+    public class History
     {
         public History()
         {

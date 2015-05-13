@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TravelAgencyModel
 {
-    class Account
+    public class Account
     {
         public int ID { get; private set; }
 
