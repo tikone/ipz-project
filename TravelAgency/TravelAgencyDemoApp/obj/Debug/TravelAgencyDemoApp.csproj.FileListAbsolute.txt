@@ -1,0 +1,5 @@
+E:\git\Новая папка\TravelAgency\TravelAgency\TravelAgencyDemoApp\bin\Debug\TravelAgencyDemoApp.exe
+E:\git\Новая папка\TravelAgency\TravelAgency\TravelAgencyDemoApp\bin\Debug\TravelAgencyDemoApp.pdb
+E:\git\Новая папка\TravelAgency\TravelAgency\TravelAgencyDemoApp\obj\Debug\TravelAgencyDemoApp.csprojResolveAssemblyReference.cache
+E:\git\Новая папка\TravelAgency\TravelAgency\TravelAgencyDemoApp\obj\Debug\TravelAgencyDemoApp.exe
+E:\git\Новая папка\TravelAgency\TravelAgency\TravelAgencyDemoApp\obj\Debug\TravelAgencyDemoApp.pdb
