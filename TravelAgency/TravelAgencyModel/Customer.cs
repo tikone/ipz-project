@@ -47,14 +47,14 @@ namespace TravelAgencyModel
                 return true;
             }
 
-        public void addTour( Tour _tour )
-        {
-            if( !IsRegistered() )
-                return;
+            public void addTour( Tour _tour )
+            {
+                if( !IsRegistered() )
+                    return;
 
-            Account.AddTour( _tour );
+                Account.AddTour( _tour );
 
-        }
+            }
 
         #endregion
     }

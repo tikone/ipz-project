@@ -90,7 +90,6 @@ namespace TravelAgencyModel
 
             public void ReserveRoom( Room _room )
             {
-                //_hotel.
                 //TODO Room.check()
                 if (!m_hotel.CheckReservedRoom(_room))
                 {
