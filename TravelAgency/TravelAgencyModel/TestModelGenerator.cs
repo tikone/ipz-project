@@ -12,7 +12,7 @@ namespace TravelAgencyModel
 		public TestModelGenerator( TravelAgency _travelAgency )
 		{
 
-			Customer vasia = new Customer(@"vasia", @"petrov");
+			Customer vasia = new Customer(@"John", @"Doe");
 
 			vasia.Registrate(
 				1, @"vvv_leningrad", @"sobaka@gmail.com", 1234
@@ -22,7 +22,7 @@ namespace TravelAgencyModel
 
 			var rooms = generateRooms();
 
-			Hotel hotel = new Hotel(@"azaza", @"best_street_eu", HotelType.FiveStar, rooms);
+			Hotel hotel = new Hotel(@"AvePlazza", @"first_street", HotelType.FiveStar, rooms);
 
 			var airline = generateAirline();
 

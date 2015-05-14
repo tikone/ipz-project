@@ -24,7 +24,7 @@ namespace TravelAgencyModel
             output.WriteLine( "Name: " + _customer.Name );
             output.WriteLine( "Surname: " + _customer.Surname );
 
-            if (_customer.IsRegistered())
+            if (_customer.IsRegistered()) 
                 showAccount(_customer.Account);
         }
 
@@ -49,6 +49,28 @@ namespace TravelAgencyModel
             output.WriteLine("Country: " + _tour.Country);
             output.WriteLine("Date: " + _tour.Date_Time.ToString("d", culture) );
             output.WriteLine("Price: " + _tour.Price);
+
+            showHotel(_tour.m_hotel);
+        }
+
+        private void showHotel( Hotel _hotel)
+        {
+            output.WriteLine();
+            output.WriteLine("===Hotel Information===");
+            output.WriteLine("Name: " + _hotel.Name);
+            output.WriteLine("Address: "+ _hotel.Address);
+            output.WriteLine("HotelType: "+ _hotel.Type);
+
+            //showRoom(_hotel.);
+        }
+
+        private void showRoom(Room _room)
+        {
+            output.WriteLine();
+            output.WriteLine("===Room Information===");
+            output.WriteLine("bed: "+ _room.BedNumber);
+            output.WriteLine("BedType: "+_room.Type);
+            output.WriteLine("Reserved: " +_room.Reserved);
         }
 
         private TextWriter output;

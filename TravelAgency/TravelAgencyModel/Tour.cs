@@ -20,6 +20,8 @@ namespace TravelAgencyModel
 
 		public TourType Type { get; set; }
 
+        public Hotel m_hotel{get; set;}
+
 #endregion
 
 #region private fields
@@ -32,7 +34,7 @@ namespace TravelAgencyModel
 
 		private List<Room> m_rooms;
 
-		private Hotel m_hotel;
+		
 		private Airline m_airline;
 
 		//todo

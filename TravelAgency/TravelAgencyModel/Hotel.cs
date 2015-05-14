@@ -18,6 +18,7 @@ namespace TravelAgencyModel
 			this.Name = _name;
 			this.Address = _address;
 			this.Type = _type;
+
 			this.m_rooms = _rooms;
 		}
 
@@ -29,7 +30,7 @@ namespace TravelAgencyModel
 			return true;
 		}
 
-		private HashSet<Room> m_rooms;
+		public HashSet<Room> m_rooms;
 
 	}
 }
