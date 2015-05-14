@@ -1,0 +1,5 @@
+D:\ipz-project\TravelAgency\TravelAgencyDemoApp\bin\Debug\TravelAgencyDemoApp.exe
+D:\ipz-project\TravelAgency\TravelAgencyDemoApp\bin\Debug\TravelAgencyDemoApp.pdb
+D:\ipz-project\TravelAgency\TravelAgencyDemoApp\obj\Debug\TravelAgencyDemoApp.csprojResolveAssemblyReference.cache
+D:\ipz-project\TravelAgency\TravelAgencyDemoApp\obj\Debug\TravelAgencyDemoApp.exe
+D:\ipz-project\TravelAgency\TravelAgencyDemoApp\obj\Debug\TravelAgencyDemoApp.pdb

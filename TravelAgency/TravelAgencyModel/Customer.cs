@@ -12,8 +12,6 @@ namespace TravelAgencyModel
 
         public string Surname { public get { return surname; } private set; }
 
-        public string Surname { public get { return surname; } private set; }
-
         public Customer( string _name, string _surname )
         {
             name = _name;
