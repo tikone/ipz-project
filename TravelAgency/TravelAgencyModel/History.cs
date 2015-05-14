@@ -10,7 +10,9 @@ namespace TravelAgencyModel
             visitedTours = new List<Tour>();
         }
 
-        public void AddTour(Tour tour)
+		#region public methods
+
+		public void AddTour(Tour tour)
         {
             visitedTours.Add(tour);
         }
@@ -21,6 +23,12 @@ namespace TravelAgencyModel
                 _function(tour);
         }
 
-        private List<Tour> visitedTours;
-    }
+		#endregion
+
+		#region private fields
+
+		private List<Tour> visitedTours;
+
+		#endregion
+	}
 }

@@ -7,20 +7,27 @@ using System.Threading.Tasks;
 namespace TravelAgencyModel
 {
     public class Customer
-    {
+	{
+
+		#region public fields
+
 		public string Name { get; private set; }
         
 		public string Surname { get; private set; }
 
         public Account Account { get; private set; }
 
-        public Customer( string _name, string _surname )
+		#endregion
+
+		public Customer( string _name, string _surname )
         {
 			Name = _name;
 			Surname = _surname;
         }
 
-        public bool IsRegistered()
+		#region public methods
+
+		public bool IsRegistered()
         {
             return Account != null;
         }
@@ -29,7 +36,8 @@ namespace TravelAgencyModel
                 int _id
             ,   string _login
             ,   string _mail
-            ,   int _passwordHash )
+            ,   int _passwordHash
+		)
         {
             if( IsRegistered() )
                 return false;
@@ -46,7 +54,8 @@ namespace TravelAgencyModel
 
             Account.AddTour(_tour);
 
-        }
+		}
 
-    }
+		#endregion
+	}
 }

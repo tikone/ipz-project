@@ -7,6 +7,9 @@ namespace TravelAgencyModel
 {
 	public class Ticket
 	{
+
+		#region public fields
+
 		public DateTime Departure { get; set; }
 
 		public DateTime ArrivalDate { get; set; }
@@ -18,6 +21,8 @@ namespace TravelAgencyModel
 		public String ArrivalCountry { get; set; }
 
 		public TicketType Type { get; set; }
+
+		#endregion
 
 		public Ticket (
 				DateTime _departure
@@ -33,6 +38,8 @@ namespace TravelAgencyModel
 			this.ArrivalCountry = _arrivalContry;
 			this.Type = _type;
 		}
+
+		#region override
 
 		public override String ToString()
 		{
@@ -51,5 +58,8 @@ namespace TravelAgencyModel
 
 			return builder.ToString();
 		}
+
+		#endregion
+
 	}
 }

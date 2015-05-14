@@ -11,11 +11,13 @@ namespace TravelAgencyModel
 
 		private HashSet<Ticket> m_tickets;
 
-		public Airline( String _name )
+		public Airline(String _name)
 		{
 			this.Name = _name;
 			m_tickets = new HashSet<Ticket>();
 		}
+
+		#region public fields
 
 		public void AddTicket( Ticket _ticket )
 		{
@@ -24,7 +26,7 @@ namespace TravelAgencyModel
 
 		public Boolean CheckTicket( Ticket _ticket )
 		{
-			if (m_tickets.Contains(_ticket))	//shit
+			if (m_tickets.Contains(_ticket))
 				return _ticket.Reserved;
 
 			return false;
@@ -41,5 +43,6 @@ namespace TravelAgencyModel
 			return tickets;
 		}
 
+		#endregion
 	}
 }

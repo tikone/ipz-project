@@ -25,6 +25,6 @@ namespace TravelAgencyDemoApp
             reporter.generate();
         }
 
-        private TravelAgency travelAgency = new TravelAgency();
+       private TravelAgency travelAgency = new TravelAgency();
 	}
 }

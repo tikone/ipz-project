@@ -20,6 +20,12 @@ namespace TravelAgencyModel
 
 		public TourType Type { get; set; }
 
+        public Hotel m_hotel {get; set;}
+
+		public List<Ticket> Tickets { get; private set; }
+
+		public List<Room> Rooms { get; private set; }
+
 #endregion
 
 #region private fields
@@ -28,15 +34,7 @@ namespace TravelAgencyModel
 
 		private List<Excursion> m_excursions;
 
-		private List<Ticket> m_tickets;
-
-		private List<Room> m_rooms;
-
-		private Hotel m_hotel;
 		private Airline m_airline;
-
-		//todo
-		//private Photo
 
 #endregion
 
@@ -62,10 +60,10 @@ namespace TravelAgencyModel
 
 			this.m_hotel = _hotel;
 			this.m_airline = _airline;
+			this.Tickets = new List<Ticket>();
 
+			this.Rooms = new List<Room>();
 			m_excursions = new List<Excursion>();
-			m_tickets = new List<Ticket>();
-			m_rooms = new List<Room>();
 
 		}
 
@@ -87,15 +85,18 @@ namespace TravelAgencyModel
 		public void ReserveTicket( Ticket _ticket )
 		{
 			//TODO AirLine.check( _ticket ) // check date
-			m_tickets.Add(_ticket);
+			this.Tickets.Add(_ticket);
 		}
 
 		public void ReserveRoom( Room _room )
 		{
 			//_hotel.
 			//TODO Room.check()
-			if( m_hotel.CheckReservedRoom(_room) )
-				m_rooms.Add(_room);
+			if (!m_hotel.CheckReservedRoom(_room))
+			{
+				m_hotel.ReserveRoom(_room);
+				this.Rooms.Add(_room);
+			}
 
 		}
 

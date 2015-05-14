@@ -10,7 +10,7 @@ namespace TravelAgencyModel
 		public TestModelGenerator( TravelAgency _travelAgency )
 		{
 
-			Customer vasia = new Customer(@"vasia", @"petrov");
+			Customer vasia = new Customer(@"John", @"Doe");
 
 			vasia.Registrate(
 				1, @"vvv_leningrad", @"sobaka@gmail.com", 1234
@@ -20,7 +20,7 @@ namespace TravelAgencyModel
 
 			var rooms = generateRooms();
 
-			Hotel hotel = new Hotel(@"azaza", @"best_street_eu", HotelType.FiveStar, rooms);
+			Hotel hotel = new Hotel(@"AvePlazza", @"first_street", HotelType.FiveStar, rooms);
 
 			var airline = generateAirline();
 
@@ -50,7 +50,7 @@ namespace TravelAgencyModel
 		{
 			HashSet<Room> rooms = new HashSet<Room>();
 
-			for (int i = 0; i < 5; ++i)
+			for (int i = 1; i < 5; ++i)
 				rooms.Add(new Room(i, BedType.Single));
 
 			return rooms;

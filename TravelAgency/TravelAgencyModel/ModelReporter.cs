@@ -24,7 +24,7 @@ namespace TravelAgencyModel
             output.WriteLine( "Name: " + _customer.Name );
             output.WriteLine( "Surname: " + _customer.Surname );
 
-            if (_customer.IsRegistered())
+            if (_customer.IsRegistered()) 
                 showAccount(_customer.Account);
         }
 
@@ -49,7 +49,44 @@ namespace TravelAgencyModel
             output.WriteLine("Country: " + _tour.Country);
             output.WriteLine("Date: " + _tour.Date_Time.ToString("d", culture) );
             output.WriteLine("Price: " + _tour.Price);
+
+            showHotel(_tour.m_hotel);
+
+			showItems(_tour.Tickets, @"Tickets");
+
+			showItems(_tour.Rooms, @"Rooms");
         }
+
+        private void showHotel( Hotel _hotel)
+        {
+            output.WriteLine();
+            output.WriteLine("===Hotel Information===");
+            output.WriteLine("Name: " + _hotel.Name);
+            output.WriteLine("Address: "+ _hotel.Address);
+            output.WriteLine("HotelType: "+ _hotel.Type);
+
+            //showRoom(_hotel.);
+        }
+
+        private void showRoom(Room _room)
+        {
+            output.WriteLine();
+            output.WriteLine("===Room Information===");
+            output.WriteLine("bed: "+ _room.BedNumber);
+            output.WriteLine("BedType: "+_room.Type);
+            output.WriteLine("Reserved: " +_room.Reserved);
+        }
+
+		private void showItems< _Item >( List< _Item > _items, String _itemName )
+		{
+			if (_items.Count == 0)
+				return;
+
+			output.WriteLine();
+			output.WriteLine("==={0}===", _itemName);
+			foreach (var it in _items)
+				output.WriteLine(it);
+		}
 
         private TextWriter output;
         private TravelAgency travelAgency;

@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 namespace TravelAgencyModel
 {
     public class Account
-    {
-        public int ID { get; private set; }
+	{
+
+		#region public fields
+
+		public int ID { get; private set; }
 
 		public string Login { get; set; }
 
@@ -18,7 +21,9 @@ namespace TravelAgencyModel
 
         public History History { get; set; }
 
-        public Account( int _id, string _login, string _mail, int _passwordHash )
+		#endregion
+
+		public Account( int _id, string _login, string _mail, int _passwordHash )
         {
 			ID = _id;
 			Login = _login;

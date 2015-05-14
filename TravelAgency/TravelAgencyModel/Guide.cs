@@ -7,6 +7,7 @@ namespace TravelAgencyModel
 {
 	class Guide
 	{
+		#region public fields
 
 		public String Name { get; set; }
 
@@ -15,6 +16,8 @@ namespace TravelAgencyModel
 		public Boolean Available { get; set; }
 
 		public Int32 Phone { get; set; }
+
+		#endregion
 
 	}
 }

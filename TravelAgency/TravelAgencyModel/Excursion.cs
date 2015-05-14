@@ -7,13 +7,18 @@ namespace TravelAgencyModel
 {
 	public class Excursion
 	{
+
+		#region public fields
+
 		public String Name { get; set; }
 
 		public Double Price { get; set; }
 
-		public DateTime Date_Time { get; set; } // add date / time class
+		public DateTime Date_Time { get; set; }
 
 		private List<Guide> m_guides;
+
+		#endregion
 
 		public Excursion( String _name, Double _price, DateTime _dateTime )
 		{
@@ -23,6 +28,8 @@ namespace TravelAgencyModel
 
 			m_guides = new List<Guide>();
 		}
+
+		#region public methods
 
 		public HashSet<String> getAvailableLanguages()
 		{
@@ -34,5 +41,7 @@ namespace TravelAgencyModel
 
 			return languages;
 		}
+
+		#endregion
 	}
 }
