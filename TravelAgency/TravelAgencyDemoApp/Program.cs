@@ -5,18 +5,18 @@ using TravelAgencyModel;
 
 namespace TravelAgencyDemoApp
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
+    class Program
+    {
+        static void Main(string[] args)
+        {
             Program p = new Program();
             p.fillTestModel();
             p.generateModelReport();
-		}
+        }
 
         private void fillTestModel()
         {
-			new TestModelGenerator(travelAgency);
+            new TestModelGenerator(travelAgency);
         }
 
         private void generateModelReport()
@@ -26,5 +26,5 @@ namespace TravelAgencyDemoApp
         }
 
        private TravelAgency travelAgency = new TravelAgency();
-	}
+    }
 }

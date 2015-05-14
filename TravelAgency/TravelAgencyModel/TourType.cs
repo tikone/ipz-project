@@ -1,11 +1,11 @@
 ﻿namespace TravelAgencyModel
 {
-	public enum TourType
-	{
-			Hot
-		,	City
-		,	Beer
-		,	Beach
-		,	Ski
-	}
+    public enum TourType
+    {
+            Hot
+        ,    City
+        ,    Beer
+        ,    Beach
+        ,    Ski
+    }
 }

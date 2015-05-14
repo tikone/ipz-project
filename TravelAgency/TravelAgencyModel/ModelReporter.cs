@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Globalization;
 
+using System.Linq;
+
 namespace TravelAgencyModel
 {
     public class ModelReporter
@@ -37,7 +39,7 @@ namespace TravelAgencyModel
             output.WriteLine( "Mail: " + _account.Mail );
             output.WriteLine( "Password hash: " + _account.PasswordHash );
 
-            _account.History.viewHistory( showOrderedTours );
+            showItems( _account.History.ToList(), @"History" );
         }
 
         private void showOrderedTours( Tour _tour )
@@ -52,9 +54,9 @@ namespace TravelAgencyModel
 
             showHotel(_tour.m_hotel);
 
-			showItems(_tour.Tickets, @"Tickets");
+            showItems(_tour.Tickets, @"Tickets");
 
-			showItems(_tour.Rooms, @"Rooms");
+            showItems(_tour.Rooms, @"Rooms");
         }
 
         private void showHotel( Hotel _hotel)
@@ -64,29 +66,19 @@ namespace TravelAgencyModel
             output.WriteLine("Name: " + _hotel.Name);
             output.WriteLine("Address: "+ _hotel.Address);
             output.WriteLine("HotelType: "+ _hotel.Type);
-
-            //showRoom(_hotel.);
         }
 
-        private void showRoom(Room _room)
+        private void showItems< _Item >( List< _Item > _items, String _itemName )
         {
+            if (_items.Count == 0)
+                return;
+
             output.WriteLine();
-            output.WriteLine("===Room Information===");
-            output.WriteLine("bed: "+ _room.BedNumber);
-            output.WriteLine("BedType: "+_room.Type);
-            output.WriteLine("Reserved: " +_room.Reserved);
+            output.WriteLine("==={0}===", _itemName);
+
+            foreach (var it in _items)
+                output.WriteLine(it);
         }
-
-		private void showItems< _Item >( List< _Item > _items, String _itemName )
-		{
-			if (_items.Count == 0)
-				return;
-
-			output.WriteLine();
-			output.WriteLine("==={0}===", _itemName);
-			foreach (var it in _items)
-				output.WriteLine(it);
-		}
 
         private TextWriter output;
         private TravelAgency travelAgency;

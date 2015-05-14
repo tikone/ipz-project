@@ -5,10 +5,10 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	public enum TicketType
-	{
-			FirstClass
-		,	BusinessClass
-		,	EconomyClass
-	}
+    public enum TicketType
+    {
+            FirstClass
+        ,    BusinessClass
+        ,    EconomyClass
+    }
 }

@@ -5,46 +5,62 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	public class Room
-	{
+    public class Room
+    {
 
-		#region public fields
+        #region public fields
 
-		public Int32 BedNumber { get; set; }
+        public Int32 Number { get; private set; }
 
-		public Boolean Reserved { get; set; }
+        public Int32 BedNumber { get; private set; }
 
-		public BedType Type { get; set; }
+        public Boolean Reserved { get; set; }
 
-		#endregion
+        public BedType TypeOfBeds { get; private set; }
 
-		public Room( Int32 _bedNumber, BedType _type)
-		{
-			this.BedNumber = _bedNumber;
-			this.Reserved = false;
-			this.Type = _type;
-		}
+        public RoomType TypeOfRoom { get; private set; }
 
-		#region ovverride
+        #endregion
 
-		public override string ToString()
-		{
-			var builder = new StringBuilder();
+        public Room(
+                Int32 _number
+            ,   Int32 _bedNumber
+            ,   BedType _typeOfBed
+            ,   RoomType _typeOfRoom
+        )
+        {
+            this.Number = _number;
+            this.BedNumber = _bedNumber;
+            this.Reserved = false;
+            this.TypeOfBeds = _typeOfBed;
+            this.TypeOfRoom = _typeOfRoom;
+        }
 
-			String sep = @"  ";
-			builder.Append(@"bed number - ");
-			builder.Append(this.BedNumber);
-			builder.Append(sep);
-			builder.Append(@"reserved - ");
-			builder.Append(this.Reserved);
-			builder.Append(sep);
-			builder.Append(@"type - ");
-			builder.Append(this.Type);
 
-			return builder.ToString();
-		}
+        #region override
 
-		#endregion
+        public override string ToString()
+        {
+            var builder = new StringBuilder();
 
-	}
+            String sep = @"  ";
+            builder.Append(@"number - ");
+            builder.Append(this.Number);
+            builder.Append(@"bed number - ");
+            builder.Append(this.BedNumber);
+            builder.Append(sep);
+            builder.Append(@"reserved - ");
+            builder.Append(this.Reserved);
+            builder.Append(sep);
+            builder.Append(@"typeBed- ");
+            builder.Append(this.TypeOfRoom);
+            builder.Append(@"typeRoom - ");
+            builder.Append(this.TypeOfRoom);
+
+            return builder.ToString();
+        }
+
+        #endregion
+
+    }
 }

@@ -5,12 +5,12 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	public enum HotelType
-	{
-			OneStar
-		,	TwoStar
-		,	ThreeeStar
-		,	FourStar
-		,	FiveStar
-	}
+    public enum HotelType : byte
+    {
+             OneStar
+        ,    TwoStar
+        ,    ThreeeStar
+        ,    FourStar
+        ,    FiveStar
+    }
 }

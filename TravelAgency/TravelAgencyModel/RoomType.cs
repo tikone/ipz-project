@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace TravelAgencyModel
 {
-    public enum BedType
+    public enum RoomType
     {
-            Single
-        ,    Double
+            Standart
+        ,   SemiLuxury
+        ,   Luxury
     }
 }

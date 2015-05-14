@@ -5,44 +5,44 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	public class Airline
-	{
-		public String Name { get; private set; }
+    public class Airline
+    {
+        public String Name { get; private set; }
 
-		private HashSet<Ticket> m_tickets;
+        private HashSet<Ticket> m_tickets;
 
-		public Airline(String _name)
-		{
-			this.Name = _name;
-			m_tickets = new HashSet<Ticket>();
-		}
+        public Airline(String _name)
+        {
+            this.Name = _name;
+            m_tickets = new HashSet<Ticket>();
+        }
 
-		#region public fields
+        #region public methods
 
-		public void AddTicket( Ticket _ticket )
-		{
-			m_tickets.Add(_ticket);
-		}
+        public void AddTicket( Ticket _ticket )
+        {
+            m_tickets.Add(_ticket);
+        }
 
-		public Boolean CheckTicket( Ticket _ticket )
-		{
-			if (m_tickets.Contains(_ticket))
-				return _ticket.Reserved;
+        public Boolean CheckTicket( Ticket _ticket )
+        {
+            if (m_tickets.Contains(_ticket))
+                return _ticket.Reserved;
 
-			return false;
-		}
+            return false;
+        }
 
-		public List<Ticket> GetAvailableTicket()
-		{
-			List<Ticket> tickets = new List<Ticket>();
+        public List<Ticket> GetAvailableTicket()
+        {
+            List<Ticket> tickets = new List<Ticket>();
 
-			foreach (var tik in m_tickets)
-				if (!tik.Reserved)
-					tickets.Add(tik);
+            foreach (var tik in m_tickets)
+                if (!tik.Reserved)
+                    tickets.Add(tik);
 
-			return tickets;
-		}
+            return tickets;
+        }
 
-		#endregion
-	}
+        #endregion
+    }
 }

@@ -5,19 +5,20 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	class Guide
-	{
-		#region public fields
+    class Guide
+    {
 
-		public String Name { get; set; }
+        #region public fields
 
-		public String Language { get; set; }
+        public String Name { get; set; }
 
-		public Boolean Available { get; set; }
+        public String Language { get; set; }
 
-		public Int32 Phone { get; set; }
+        public Boolean Available { get; set; }
 
-		#endregion
+        public Int32 Phone { get; set; }
 
-	}
+        #endregion
+
+    }
 }
