@@ -9,8 +9,10 @@ namespace TravelAgencyModel
     class Customer
     {
 		public string Name { get; private set; }
-
+        
 		public string Surname { get; private set; }
+
+        public Account Account { get; private set; }
 
         public Customer( string _name, string _surname )
         {
@@ -20,7 +22,7 @@ namespace TravelAgencyModel
 
         public bool IsRegistered()
         {
-            return account != null;
+            return Account != null;
         }
 
         public bool Registrate(
@@ -32,7 +34,7 @@ namespace TravelAgencyModel
             if( IsRegistered() )
                 return false;
 
-            account = new Account( _id, _login, _mail, _passwordHash );
+            Account = new Account(_id, _login, _mail, _passwordHash);
 
             return true;
         }
@@ -42,11 +44,9 @@ namespace TravelAgencyModel
             if (!IsRegistered() )
                 return;
 
-            account.AddTour(_tour);
+            Account.AddTour(_tour);
 
         }
-
-        private Account account;
 
     }
 }

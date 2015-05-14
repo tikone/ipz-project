@@ -16,6 +16,8 @@ namespace TravelAgencyModel
 
 		public int PasswordHash { get; set; }
 
+        public History History { get; set; }
+
         public Account( int _id, string _login, string _mail, int _passwordHash )
         {
 			ID = _id;
@@ -23,16 +25,13 @@ namespace TravelAgencyModel
 			Mail = _mail;
 			PasswordHash = _passwordHash;
 
-            history = new History();
+            History = new History();
         }
 
         public void AddTour( Tour _tour )
         {
-            history.AddTour(_tour);
+            History.AddTour(_tour);
         }
 
-        private int passwordHash;
-
-        private History history;
     }
 }
