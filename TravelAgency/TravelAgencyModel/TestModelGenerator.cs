@@ -7,8 +7,6 @@ namespace TravelAgencyModel
 {
 	public class TestModelGenerator
 	{
-		private TravelAgency m_travelAgency;
-
 		public TestModelGenerator( TravelAgency _travelAgency )
 		{
 

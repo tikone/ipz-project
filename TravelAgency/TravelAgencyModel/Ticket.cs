@@ -33,5 +33,23 @@ namespace TravelAgencyModel
 			this.ArrivalCountry = _arrivalContry;
 			this.Type = _type;
 		}
+
+		public override String ToString()
+		{
+			var builder = new StringBuilder();
+
+			String sep = @"  ";
+			builder.Append(this.Departure);
+			builder.Append(sep);
+			builder.Append(this.ArrivalDate);
+			builder.Append(sep);
+			builder.Append(this.ArrivalCountry);
+			builder.Append(sep);
+			builder.Append(this.NumberOfAirplane);
+			builder.Append(sep);
+			builder.Append(this.Type);
+
+			return builder.ToString();
+		}
 	}
 }
