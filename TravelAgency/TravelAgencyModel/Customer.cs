@@ -1,17 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace TravelAgencyModel
 {
-	public class Customer
+    public class Customer
 	{
 
 		#region public fields
 
 		public string Name { get; private set; }
- 
+        
 		public string Surname { get; private set; }
 
-		public Account Account { get; private set; }
+        public Account Account { get; private set; }
 
 		#endregion
 
@@ -24,29 +28,32 @@ namespace TravelAgencyModel
 		#region public methods
 
 		public bool IsRegistered()
-		{
-			return Account != null;
-		}
+        {
+            return Account != null;
+        }
 
-		public bool Registrate(
-				int _id
-			,	string _login
-			,	string _mail
-			,	int _passwordHash
+        public bool Registrate(
+                int _id
+            ,   string _login
+            ,   string _mail
+            ,   int _passwordHash
 		)
-		{
-			if( IsRegistered() )
-				return false;
+        {
+            if( IsRegistered() )
+                return false;
 
-			Account = new Account( _id, _login, _mail, _passwordHash );
+            Account = new Account(_id, _login, _mail, _passwordHash);
 
-			return true;
-		}
+            return true;
+        }
 
-		public void addTour( Tour _tour )
-		{
-			if( IsRegistered() )
-				Account.AddTour(_tour);
+        public void addTour( Tour _tour )
+        {
+            if (!IsRegistered() )
+                return;
+
+            Account.AddTour(_tour);
+
 		}
 
 		#endregion

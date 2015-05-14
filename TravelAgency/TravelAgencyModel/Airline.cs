@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace TravelAgencyModel
 {
@@ -9,7 +11,7 @@ namespace TravelAgencyModel
 
 		private HashSet<Ticket> m_tickets;
 
-		public Airline( String _name )
+		public Airline(String _name)
 		{
 			this.Name = _name;
 			m_tickets = new HashSet<Ticket>();
@@ -19,12 +21,12 @@ namespace TravelAgencyModel
 
 		public void AddTicket( Ticket _ticket )
 		{
-			m_tickets.Add( _ticket );
+			m_tickets.Add(_ticket);
 		}
 
 		public Boolean CheckTicket( Ticket _ticket )
 		{
-			if( m_tickets.Contains( _ticket ) )
+			if (m_tickets.Contains(_ticket))
 				return _ticket.Reserved;
 
 			return false;
@@ -34,9 +36,9 @@ namespace TravelAgencyModel
 		{
 			List<Ticket> tickets = new List<Ticket>();
 
-			foreach( var ticket in m_tickets )
-			if ( !ticket.Reserved )
-				tickets.Add( ticket );
+			foreach (var tik in m_tickets)
+				if (!tik.Reserved)
+					tickets.Add(tik);
 
 			return tickets;
 		}

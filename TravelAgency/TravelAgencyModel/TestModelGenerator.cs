@@ -20,7 +20,7 @@ namespace TravelAgencyModel
 
 			var rooms = generateRooms();
 
-			Hotel hotel = new Hotel(@"AvePlazza", @"first_street", 5, rooms);
+			Hotel hotel = new Hotel(@"AvePlazza", @"first_street", HotelType.FiveStar, rooms);
 
 			var airline = generateAirline();
 
