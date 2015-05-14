@@ -5,9 +5,9 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-    public enum BedType
+    public enum BedType : byte
     {
             Single
-        ,    Double
+        ,   Double
     }
 }

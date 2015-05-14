@@ -11,11 +11,11 @@ namespace TravelAgencyModel
 
         #region public fields
 
-        public string Name { get; private set; }
-        
-        public string Surname { get; private set; }
+            public string Name { get; private set; }
 
-        public Account Account { get; private set; }
+            public string Surname { get; private set; }
+
+            public Account Account { get; private set; }
 
         #endregion
 
@@ -27,32 +27,32 @@ namespace TravelAgencyModel
 
         #region public methods
 
-        public bool IsRegistered()
-        {
-            return Account != null;
-        }
+            public bool IsRegistered()
+            {
+                return Account != null;
+            }
 
-        public bool Registrate(
-                int _id
-            ,   string _login
-            ,   string _mail
-            ,   int _passwordHash
-        )
-        {
-            if( IsRegistered() )
-                return false;
+            public bool Registrate(
+                    int _id
+                ,   string _login
+                ,   string _mail
+                ,   int _passwordHash
+            )
+            {
+                if( IsRegistered() )
+                    return false;
 
-            Account = new Account(_id, _login, _mail, _passwordHash);
+                Account = new Account( _id, _login, _mail, _passwordHash );
 
-            return true;
-        }
+                return true;
+            }
 
         public void addTour( Tour _tour )
         {
-            if (!IsRegistered() )
+            if( !IsRegistered() )
                 return;
 
-            Account.AddTour(_tour);
+            Account.AddTour( _tour );
 
         }
 

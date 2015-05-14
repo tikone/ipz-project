@@ -15,13 +15,13 @@ namespace TravelAgencyModel
 
         public void addCustomer( Customer _customer)
         {
-            customers.Add(_customer);
+            customers.Add( _customer );
         }
 
         public void forEachCustomer( Action< Customer > _function )
         {
-            foreach (var customer in customers)
-                _function(customer);
+            foreach( var customer in customers )
+                _function( customer );
         }
 
         private List< Customer > customers;

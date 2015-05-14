@@ -10,17 +10,22 @@ namespace TravelAgencyModel
 
         #region public fields
 
-        public String Name { get; set; }
+            public String Name { get; set; }
 
-        public String Address { get; set; }
+            public String Address { get; set; }
 
-        public HotelType Type { get; set; }
+            public HotelType Type { get; set; }
 
-        public HashSet<Room> Rooms { get; set; }
+            public HashSet<Room> Rooms { get; set; }
 
         #endregion
 
-        public Hotel( String _name, String _address, HotelType _type, HashSet<Room> _rooms)
+        public Hotel(
+                String _name
+            ,   String _address
+            ,   HotelType _type
+            ,   HashSet< Room > _rooms
+        )
         {
             this.Name = _name;
             this.Address = _address;
@@ -31,21 +36,21 @@ namespace TravelAgencyModel
 
         #region public methods
 
-        public Boolean CheckReservedRoom( Room _room )
-        {
-            if (Rooms.Contains(_room))
-                return _room.Reserved;
+            public Boolean CheckReservedRoom( Room _room )
+            {
+                if( Rooms.Contains( _room ) )
+                    return _room.Reserved;
 
-            return true;
-        }
+                return true;
+            }
 
-        public void ReserveRoom( Room _room )
-        {
-            if (Rooms.Contains(_room))
-                _room.Reserved = true;
-            else
-                throw new Exception("this room reserved yet!");
-        }
+            public void ReserveRoom( Room _room )
+            {
+                if( Rooms.Contains( _room ) )
+                    _room.Reserved = true;
+                else
+                    throw new Exception( "this room reserved yet!" );
+            }
 
         #endregion
 

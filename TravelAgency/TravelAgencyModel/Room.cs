@@ -10,15 +10,15 @@ namespace TravelAgencyModel
 
         #region public fields
 
-        public Int32 Number { get; private set; }
+            public Int32 Number { get; private set; }
 
-        public Int32 BedNumber { get; private set; }
+            public Int32 BedNumber { get; private set; }
 
-        public Boolean Reserved { get; set; }
+            public Boolean Reserved { get; set; }
 
-        public BedType TypeOfBeds { get; private set; }
+            public BedType TypeOfBeds { get; private set; }
 
-        public RoomType TypeOfRoom { get; private set; }
+            public RoomType TypeOfRoom { get; private set; }
 
         #endregion
 

@@ -19,15 +19,15 @@ namespace TravelAgencyModel
 
             public int PasswordHash { get; set; }
 
-            public HashSet<Tour> History { get; private set; }
+            public HashSet< Tour > History { get; private set; }
 
         #endregion
 
         public Account(
                 int _id
-            ,    string _login
-            ,    string _mail
-            ,    int _passwordHash
+            ,   string _login
+            ,   string _mail
+            ,   int _passwordHash
         )
         {
             ID = _id;
@@ -39,7 +39,7 @@ namespace TravelAgencyModel
         public void AddTour( Tour _tour )
         {
             if( History == null )
-                History = new HashSet<Tour>();
+                History = new HashSet< Tour >();
 
             History.Add( _tour );
 

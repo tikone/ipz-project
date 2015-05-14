@@ -7,7 +7,7 @@ namespace TravelAgencyDemoApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main( string[] args )
         {
             Program p = new Program();
             p.fillTestModel();
@@ -16,12 +16,12 @@ namespace TravelAgencyDemoApp
 
         private void fillTestModel()
         {
-            new TestModelGenerator(travelAgency);
+            new TestModelGenerator( travelAgency );
         }
 
         private void generateModelReport()
         {
-            ModelReporter reporter = new ModelReporter( Console.Out, travelAgency);
+            ModelReporter reporter = new ModelReporter( Console.Out, travelAgency );
             reporter.generate();
         }
 

@@ -10,13 +10,13 @@ namespace TravelAgencyModel
 
         #region public fields
 
-        public String Name { get; set; }
+            public String Name { get; set; }
 
-        public Double Price { get; set; }
+            public Double Price { get; set; }
 
-        public DateTime Date_Time { get; set; }
+            public DateTime Date_Time { get; set; }
 
-        private List<Guide> m_guides;
+            private List< Guide > m_guides;
 
         #endregion
 
@@ -30,21 +30,21 @@ namespace TravelAgencyModel
             this.Price = _price;
             this.Date_Time = _dateTime;
 
-            m_guides = new List<Guide>();
+            m_guides = new List< Guide >();
         }
 
         #region public methods
 
-        public HashSet<String> getAvailableLanguages()
-        {
-            HashSet<String> languages = new HashSet<string>();
+            public HashSet< String > getAvailableLanguages()
+            {
+                HashSet< String > languages = new HashSet< String >();
 
-            foreach (Guide guide in m_guides)
-                if( guide.Available )
-                    languages.Add(guide.Language);
+                foreach( Guide guide in m_guides )
+                    if( guide.Available )
+                        languages.Add( guide.Language );
 
-            return languages;
-        }
+                return languages;
+            }
 
         #endregion
     }

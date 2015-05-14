@@ -10,13 +10,13 @@ namespace TravelAgencyModel
 
         #region public fields
 
-        public String Name { get; set; }
+            public String Name { get; set; }
 
-        public String Language { get; set; }
+            public String Language { get; set; }
 
-        public Boolean Available { get; set; }
+            public Boolean Available { get; set; }
 
-        public Int32 Phone { get; set; }
+            public Int32 Phone { get; set; }
 
         #endregion
 
