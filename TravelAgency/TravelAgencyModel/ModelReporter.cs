@@ -23,12 +23,15 @@ namespace TravelAgencyModel
             output.WriteLine( "==== Customers ====" );
             output.WriteLine( "Name: " + _customer.Name );
             output.WriteLine( "Surname: " + _customer.Surname );
+
+            if (_customer.IsRegistered())
+                showAccount(_customer.Account);
         }
 
          private void showAccount( Account _account )
         {
             output.WriteLine();
-            output.WriteLine( "\tAccount Information" );
+            output.WriteLine( "\t===Account Information===" );
             output.WriteLine( "\t\tID: " + _account.ID );
             output.WriteLine( "\t\tLogin: " + _account.Login );
             output.WriteLine( "\t\tMail: " + _account.Mail );
@@ -40,8 +43,7 @@ namespace TravelAgencyModel
         private void showOrderedTours( Tour _tour )
         {
             output.WriteLine();
-            CultureInfo culture = new CultureInfo("pt-BR");
-            output.WriteLine("\t\tTour Information");
+            output.WriteLine("\t\t===Tour Information===");
             output.WriteLine("\t\t\tTourDescription: " + _tour.ViewInfo() );
             output.WriteLine("\t\t\tAmountPeople: " + _tour.AmountPeople);
             output.WriteLine("\t\t\tCountry: " + _tour.Country);
@@ -51,5 +53,6 @@ namespace TravelAgencyModel
 
         private TextWriter output;
         private TravelAgency travelAgency;
+        private CultureInfo culture = new CultureInfo("pt-BR");
     }
 }
