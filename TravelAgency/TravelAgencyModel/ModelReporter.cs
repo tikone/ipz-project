@@ -7,14 +7,15 @@ namespace TravelAgencyModel
 {
     public class ModelReporter
     {
-        public ModelReporter( TextWriter _output )
+        public ModelReporter( TextWriter _output, TravelAgency _travelAgency )
         {
             output = _output;
+            travelAgency = _travelAgency;
         }
 
         public void generate()
         {
-            
+            travelAgency.forEachCustomer(showCustomer);
         }
 
         private void showCustomer( Customer _customer )
@@ -49,5 +50,6 @@ namespace TravelAgencyModel
         }
 
         private TextWriter output;
+        private TravelAgency travelAgency;
     }
 }

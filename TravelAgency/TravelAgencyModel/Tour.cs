@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TravelAgencyModel
 {
-	class Tour
+	public class Tour
 	{
 
 #region public fields
