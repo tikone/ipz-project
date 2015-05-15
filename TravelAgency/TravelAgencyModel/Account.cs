@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TravelAgencyModel
 {
-    public class Account
+	public class Account
 	{
 
 		#region public fields
@@ -19,9 +16,9 @@ namespace TravelAgencyModel
 
 		public int PasswordHash { get; set; }
 
-        public History History { get; set; }
-
 		#endregion
+
+		#region constructors
 
 		public Account( int _id, string _login, string _mail, int _passwordHash )
         {
@@ -30,13 +27,30 @@ namespace TravelAgencyModel
 			Mail = _mail;
 			PasswordHash = _passwordHash;
 
-            History = new History();
+            visitedTours = new List<Tour>();
         }
 
-        public void AddTour( Tour _tour )
-        {
-            History.AddTour(_tour);
-        }
+		#endregion
 
-    }
+		#region public methods
+
+		public void AddTour( Tour _tour )
+		{
+			visitedTours.Add( _tour );
+		}
+
+		public void forEachTour( Action<Tour> _function )
+		{
+			foreach( var tour in visitedTours )
+			_function( tour );
+		}
+
+		#endregion
+
+		#region private fields
+
+		private List<Tour> visitedTours;
+
+		#endregion
+	}
 }

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace TravelAgencyModel
 {
@@ -35,9 +33,9 @@ namespace TravelAgencyModel
 		{
 			HashSet<String> languages = new HashSet<string>();
 
-			foreach (Guide guide in m_guides)
+			foreach( Guide guide in m_guides )
 				if( guide.Available )
-				languages.Add(guide.Language);
+					languages.Add(guide.Language);
 
 			return languages;
 		}

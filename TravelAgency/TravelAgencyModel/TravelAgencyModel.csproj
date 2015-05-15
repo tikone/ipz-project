@@ -47,7 +47,6 @@
     <Compile Include="Customer.cs" />
     <Compile Include="Excursion.cs" />
     <Compile Include="Guide.cs" />
-    <Compile Include="History.cs" />
     <Compile Include="Hotel.cs" />
     <Compile Include="HotelType.cs" />
     <Compile Include="ModelReporter.cs" />

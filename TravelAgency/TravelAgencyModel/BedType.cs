@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace TravelAgencyModel
+﻿namespace TravelAgencyModel
 {
 	public enum BedType
 	{
 			Single
 		,	Double
+		,	Standart
+		,	Suite
+		,	SemiSuite
 	}
 }

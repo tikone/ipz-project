@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace TravelAgencyModel
 {
@@ -14,13 +12,21 @@ namespace TravelAgencyModel
 
 		public String Address { get; set; }
 
-		public HotelType Type { get; set; }
+		public int Type {
+			get { return type; }
+			set{ 
+				if( value < 1 || value > 5 )
+					throw new ArgumentException( "Invalid parametr for hotel type. Must be in range[1;5]" );
+				else
+					type = value;
+				}
+			}
 
 		public HashSet<Room> Rooms { get; set; }
 
 		#endregion
 
-		public Hotel( String _name, String _address, HotelType _type, HashSet<Room> _rooms)
+		public Hotel( String _name, String _address, int _type, HashSet<Room> _rooms )
 		{
 			this.Name = _name;
 			this.Address = _address;
@@ -33,7 +39,7 @@ namespace TravelAgencyModel
 
 		public Boolean CheckReservedRoom( Room _room )
 		{
-			if (Rooms.Contains(_room))
+			if( Rooms.Contains(_room) )
 				return _room.Reserved;
 
 			return true;
@@ -41,11 +47,17 @@ namespace TravelAgencyModel
 
 		public void ReserveRoom( Room _room )
 		{
-			if (Rooms.Contains(_room))
+			if( Rooms.Contains(_room) )
 				_room.Reserved = true;
 			else
 				throw new Exception("this room reserved yet!");
 		}
+
+		#endregion
+
+		#region private fields
+
+		private int type;
 
 		#endregion
 
