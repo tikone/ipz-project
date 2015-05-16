@@ -20,7 +20,7 @@ namespace TravelAgencyModel
 
             public TourType Type { get; set; }
 
-            public Hotel m_hotel {get; set;}
+            public Hotel Hotel {get; set;}
 
             public List<Ticket> Tickets { get; private set; }
 
@@ -32,7 +32,7 @@ namespace TravelAgencyModel
 
             private String m_description;
 
-            private List<Excursion> m_excursions;
+            private HashSet<Excursion> m_excursions;
 
             private Airline m_airline;
 
@@ -42,7 +42,7 @@ namespace TravelAgencyModel
 
             public Tour(
                     DateTime _dateTime
-                ,    Double    _price
+                ,    Double _price
                 ,    String _country
                 ,    String _description
                 ,    Int32 _amountPeople
@@ -58,12 +58,12 @@ namespace TravelAgencyModel
                 this.AmountPeople = _amountPeople;
                 this.Type = _type;
 
-                this.m_hotel = _hotel;
+                this.Hotel = _hotel;
                 this.m_airline = _airline;
                 this.Tickets = new List<Ticket>();
 
                 this.Rooms = new List<Room>();
-                m_excursions = new List<Excursion>();
+                m_excursions = new HashSet<Excursion>();
 
             }
 
@@ -82,6 +82,11 @@ namespace TravelAgencyModel
                 m_excursions.Add(_excursion);
             }
 
+            public List< Excursion > GetExcursion()
+            {
+                return m_excursions.ToList();
+            }
+
             public void ReserveTicket( Ticket _ticket )
             {
                 //TODO AirLine.check( _ticket ) // check date
@@ -91,9 +96,9 @@ namespace TravelAgencyModel
             public void ReserveRoom( Room _room )
             {
                 //TODO Room.check()
-                if (!m_hotel.CheckReservedRoom(_room))
+                if( !Hotel.CheckReservedRoom( _room ) )
                 {
-                    m_hotel.ReserveRoom(_room);
+                    Hotel.ReserveRoom(_room);
                     this.Rooms.Add(_room);
                 }
 

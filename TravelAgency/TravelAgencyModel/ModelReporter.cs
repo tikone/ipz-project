@@ -60,7 +60,7 @@ namespace TravelAgencyModel
             output.WriteLine( "Date: " + _tour.Date_Time.ToString( "d", culture ) );
             output.WriteLine( "Price: " + _tour.Price );
 
-            showHotel( _tour.m_hotel );
+            showHotel( _tour.Hotel );
 
             showItems( _tour.Tickets, @"Tickets" );
 

@@ -2,3 +2,8 @@
 /TravelAgencyModel/bin
 /TravelAgencyDemoApp/bin
 /TravelAgencyDemoApp/obj
+/TravelAgency.UnitsTests/obj
+/TravelAgency.UnitsTests/bin
+/packages
+/.nuget
+/TravelAgency.UnitsTests/packages.config

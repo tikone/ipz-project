@@ -26,10 +26,10 @@ namespace TravelAgencyModel
 
         public Ticket (
                 DateTime _departure
-            ,    DateTime _arrivalDate
-            ,    String _numberOfAirplane
-            ,    String _arrivalContry
-            ,    TicketType _type
+            ,   DateTime _arrivalDate
+            ,   String _numberOfAirplane
+            ,   String _arrivalContry
+            ,   TicketType _type
         )
         {
             this.Departure = _departure;
