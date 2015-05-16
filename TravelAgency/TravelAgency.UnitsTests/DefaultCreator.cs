@@ -152,6 +152,7 @@ namespace TravelAgency.UnitsTests
             public static Tour createTour(
                     Double _price = 999.9
                 ,   Int32 _amountPeople = 5
+                ,   Hotel _hotel = null
             )
             {
                 return
@@ -162,7 +163,9 @@ namespace TravelAgency.UnitsTests
                         ,   @"test_tour"
                         ,   _amountPeople
                         ,   TourType.Beer
-                        ,   createHotel()
+                        ,   _hotel == null
+                            ?   _hotel
+                            :   createHotel()
                         ,   createAirline()
                     );
             }

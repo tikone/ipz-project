@@ -20,7 +20,7 @@ namespace TravelAgencyModel
 
             public TourType Type { get; set; }
 
-            public Hotel Hotel {get; set;}
+            public Hotel Hotel { get; private set; }
 
             public List<Ticket> Tickets { get; private set; }
 
@@ -75,7 +75,7 @@ namespace TravelAgencyModel
             {
                 return m_description;
             }
-
+            
             public void AddExcursion( Excursion _excursion )
             {
                 //TODO check date

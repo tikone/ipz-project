@@ -39,5 +39,19 @@ namespace TravelAgency.UnitsTests
             }
 
         #endregion
+
+        #region AddHotel
+
+            [Test, Ignore]
+            public void addHotel()
+            {
+                var hotel = DefaultCreator.createHotel();
+
+                var tour = DefaultCreator.createTour( 322, 2, hotel );
+
+                Assert.AreSame( tour.Hotel, hotel );
+            }
+
+        #endregion
     }
 }
