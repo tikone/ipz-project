@@ -37,6 +37,7 @@ namespace TravelAgencyModel
             this.NumberOfAirplane = _numberOfAirplane;
             this.ArrivalCountry = _arrivalContry;
             this.Type = _type;
+            this.Reserved = false;
         }
 
         #region override

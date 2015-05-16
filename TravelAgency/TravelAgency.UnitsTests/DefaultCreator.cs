@@ -150,9 +150,9 @@ namespace TravelAgency.UnitsTests
         #region Tour
 
             public static Tour createTour(
-                    Double _price = 999.9
+                    Hotel _hotel = null
+                ,   Double _price = 999.9
                 ,   Int32 _amountPeople = 5
-                ,   Hotel _hotel = null
             )
             {
                 return

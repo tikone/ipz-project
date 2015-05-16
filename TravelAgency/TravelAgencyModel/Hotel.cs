@@ -44,6 +44,17 @@ namespace TravelAgencyModel
                 return true;
             }
 
+            public List< Room > NotReservedRoom()
+            {
+                var rooms = new List< Room >();
+
+                foreach( var i in Rooms )
+                    if( !i.Reserved )
+                        rooms.Add( i );
+
+                return rooms;
+            }
+
             public void ReserveRoom( Room _room )
             {
                 if( Rooms.Contains( _room ) )

@@ -26,6 +26,8 @@ namespace TravelAgencyModel
 
             public List<Room> Rooms { get; private set; }
 
+            public Airline Airline { get; private set; }
+
         #endregion
 
         #region private fields
@@ -33,8 +35,6 @@ namespace TravelAgencyModel
             private String m_description;
 
             private HashSet<Excursion> m_excursions;
-
-            private Airline m_airline;
 
         #endregion
 
@@ -59,7 +59,7 @@ namespace TravelAgencyModel
                 this.Type = _type;
 
                 this.Hotel = _hotel;
-                this.m_airline = _airline;
+                this.Airline = _airline;
                 this.Tickets = new List<Ticket>();
 
                 this.Rooms = new List<Room>();
@@ -78,7 +78,9 @@ namespace TravelAgencyModel
             
             public void AddExcursion( Excursion _excursion )
             {
-                //TODO check date
+                if( m_excursions.Contains( _excursion ))
+                    throw new Exception( @"Try to add twice one excursion.");
+
                 m_excursions.Add(_excursion);
             }
 
@@ -89,18 +91,36 @@ namespace TravelAgencyModel
 
             public void ReserveTicket( Ticket _ticket )
             {
+                if( _ticket == null )
+                    throw new Exception( @"null ticket");
                 //TODO AirLine.check( _ticket ) // check date
-                this.Tickets.Add(_ticket);
+
+                if( !Airline.CheckTicket( _ticket ) )
+                {
+                    _ticket.Reserved = true;
+                    this.Tickets.Add( _ticket );
+                }
+                else
+                    throw new Exception( @"ticket reserved yet" );
             }
 
             public void ReserveRoom( Room _room )
             {
-                //TODO Room.check()
-                if( !Hotel.CheckReservedRoom( _room ) )
+                if( _room == null )
+                    throw new Exception( @"null room!" );
+
+                if( Hotel.Rooms.Contains( _room ) )
                 {
-                    Hotel.ReserveRoom(_room);
-                    this.Rooms.Add(_room);
+                    if( !Hotel.CheckReservedRoom( _room ) )
+                    {
+                        Hotel.ReserveRoom(_room);
+                        this.Rooms.Add(_room);
+                    }
+                    else
+                        throw new Exception( @"this room reserved yet!" );
                 }
+                else
+                    throw new Exception( @"this room destroyed/not build yet!" );
 
             }
 

@@ -28,8 +28,8 @@ namespace TravelAgencyModel
             {
                 if( m_tickets.Contains( _ticket ) )
                     return _ticket.Reserved;
-
-                return false;
+                else
+                    throw new Exception( @"ticket not from this airline" );
             }
 
             public List< Ticket > GetAvailableTicket()
