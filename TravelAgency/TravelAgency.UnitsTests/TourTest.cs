@@ -13,12 +13,6 @@ namespace TravelAgency.UnitsTests
     [ TestFixture ]
     class TourTest
     {
-        //[ Test ]
-        //public void CreateTour()
-        //{
-        //    var tour = DefaultCreator.createTour();
-        //
-        //}
 
         #region AddExcursion
 
@@ -238,14 +232,81 @@ namespace TravelAgency.UnitsTests
 
         #region AddHotel
 
-            [Test, Ignore]
-            public void addHotel()
+        #endregion
+
+        #region Fields
+
+            [Test]
+            public void CheckCountry()
+            {
+                var tour = DefaultCreator.createTour();
+
+                Assert.AreSame( tour.Country, @"UA" );
+            }
+
+            [Test]
+            public void EmptyCountryFieldIsForbidden()
+            {
+                Assert.Throws<ArgumentException>(
+                   () => DefaultCreator.createTour( null, 500, "" )
+               );
+
+            }
+
+            [Test]
+            public void CheckDate()
+            {       
+                var tour = DefaultCreator.createTour();
+
+                Assert.AreEqual( tour.Date_Time, DefaultCreator.createDateTime() );
+            }
+
+            [Test]
+            public void ChangeDate()
+            {
+                var tour = DefaultCreator.createTour();
+                var date = DefaultCreator.createDateTime( 2015, 5, 17 );
+                tour.Date_Time = date;
+
+                Assert.AreEqual( tour.Date_Time, date );
+            }
+
+            [Test]
+            public void AddHotel()
             {
                 var hotel = DefaultCreator.createHotel();
 
-                var tour = DefaultCreator.createTour( hotel, 322, 2 );
+                var tour = DefaultCreator.createTour( hotel, 322 );
 
-                Assert.AreSame( tour.Hotel, hotel );
+                Assert.AreEqual(tour.Hotel, hotel);
+            }
+
+            [Test]
+            public void InitiallyDefaultValueAmountOfPeople()
+            {
+                var tour = DefaultCreator.createTour();
+
+                Assert.AreEqual( tour.AmountPeople, 1 );
+            }
+
+            [Test]
+            public void changeAmmounOfPeopleToNonPositive()
+            {
+                var tour = DefaultCreator.createTour();
+
+                Assert.Throws<ArgumentException>(
+                   () => tour.AmountPeople = -1
+               );
+
+            }
+
+            [Test]
+            public void ChangeAmountPeople()
+            {
+                var tour = DefaultCreator.createTour();
+                tour.AmountPeople = 2;
+
+                Assert.AreEqual(tour.AmountPeople, 2);
             }
 
         #endregion

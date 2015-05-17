@@ -152,16 +152,15 @@ namespace TravelAgency.UnitsTests
             public static Tour createTour(
                     Hotel _hotel = null
                 ,   Double _price = 999.9
-                ,   Int32 _amountPeople = 5
+                ,   String _country = @"UA"
             )
             {
                 return
                     new Tour(
                             createDateTime()
                         ,   _price
-                        ,   @"UA"
+                        ,   _country
                         ,   @"test_tour"
-                        ,   _amountPeople
                         ,   TourType.Beer
                         ,   _hotel == null
                             ?   _hotel

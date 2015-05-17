@@ -16,8 +16,6 @@ namespace TravelAgencyModel
 
             public String Country { get; set; }
 
-            public Int32 AmountPeople { get; set; }
-
             public TourType Type { get; set; }
 
             public Hotel Hotel { get; private set; }
@@ -27,6 +25,20 @@ namespace TravelAgencyModel
             public List<Room> Rooms { get; private set; }
 
             public Airline Airline { get; private set; }
+
+            public Int32 AmountPeople
+            {
+                get
+                {
+                    return m_amountPeople;
+                }
+                set
+                {
+                    if (value < 1)
+                        throw new ArgumentException( "Positive number of people expected" );
+                    m_amountPeople = value;
+                }
+            }
 
         #endregion
 
@@ -45,14 +57,18 @@ namespace TravelAgencyModel
                 ,    Double _price
                 ,    String _country
                 ,    String _description
-                ,    Int32 _amountPeople
                 ,    TourType _type
                 ,    Hotel _hotel
                 ,    Airline _airline
+                ,   Int32 _amountPeople = 1
             )
             {
                 this.Date_Time = _dateTime;
                 this.Price = _price;
+
+                if (_country.Length == 0)
+                    throw new ArgumentException( "Country should be filled" );
+
                 this.Country = _country;
                 this.m_description = _description;
                 this.AmountPeople = _amountPeople;
@@ -126,5 +142,10 @@ namespace TravelAgencyModel
 
         #endregion
 
+        #region private fields
+
+            private Int32 m_amountPeople;
+
+        #endregion
     }
 }

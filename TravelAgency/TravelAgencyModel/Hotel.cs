@@ -20,19 +20,22 @@ namespace TravelAgencyModel
 
         #endregion
 
-        public Hotel(
-                String _name
-            ,   String _address
-            ,   HotelType _type
-            ,   HashSet< Room > _rooms
-        )
-        {
-            this.Name = _name;
-            this.Address = _address;
-            this.Type = _type;
+        #region public constructor
 
-            this.Rooms = _rooms;
-        }
+            public Hotel(
+                    String _name
+                ,   String _address
+                ,   HotelType _type
+                ,   HashSet< Room > _rooms
+            )
+            {
+                this.Name = _name;
+                this.Address = _address;
+                this.Type = _type;
+
+                this.Rooms = _rooms;
+            }
+        #endregion
 
         #region public methods
 
@@ -61,6 +64,21 @@ namespace TravelAgencyModel
                     _room.Reserved = true;
                 else
                     throw new Exception( "this room reserved yet!" );
+            }
+
+        #endregion
+
+        #region override methods
+
+            public override bool Equals( Object obj )
+            {
+                if( obj is Hotel )
+                {
+                    var that = obj as Hotel;
+                    return this.Address == that.Address && this.Name == that.Name;
+                }
+
+                return false;
             }
 
         #endregion

@@ -25,7 +25,7 @@ namespace TravelAgencyModel
             var airline = generateAirline();
 
             Tour tourVasia =
-                new Tour(dateVasia, 1000, @"Ua", @"niceTour", 2, TourType.Beer, hotel, airline);
+                new Tour(dateVasia, 1000, @"Ua", @"niceTour", TourType.Beer, hotel, airline, 2);
 
             tourVasia.ReserveRoom( rooms.ElementAt( 0 ));
 
