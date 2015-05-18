@@ -97,7 +97,10 @@ namespace TravelAgencyModel
             public void AddExcursion( Excursion _excursion )
             {
                 if( m_excursions.Contains( _excursion ))
-                    throw new Exception( @"Try to add twice one excursion.");
+                    throw new ArgumentException( @"Try to add twice one excursion.");
+                
+                if ( Date_Time < _excursion.Date_Time )
+                    throw new ArgumentException( @"Date in tour must be before date of excursions." );
 
                 m_excursions.Add(_excursion);
             }
@@ -112,6 +115,9 @@ namespace TravelAgencyModel
                 if( _ticket == null )
                     throw new Exception( @"null ticket");
                 //TODO AirLine.check( _ticket ) // check date
+
+                if ( _ticket.ArrivalCountry != Country )
+                    throw new ArgumentException( "Country in ticket must be equal country in tour" );
 
                 if( !Airline.CheckTicket( _ticket ) )
                 {

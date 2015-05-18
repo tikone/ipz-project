@@ -72,11 +72,24 @@ namespace TravelAgency.UnitsTests
                         DefaultCreator.createDateTime()
                     );
 
-                tour.AddExcursion( excursion );
+                tour.AddExcursion(excursion);
 
-                Assert.Throws< Exception >(
-                    () => tour.AddExcursion( excursion )
+                Assert.Throws<ArgumentException>(
+                    () => tour.AddExcursion(excursion)
                 );
+            }
+
+            [Test]
+            public void AddExcursion_DateInTourLessThenDateOfExcursions()
+            {
+                var tour = DefaultCreator.createTour();
+
+                var excursion =
+                    DefaultCreator.createExursion(
+                        DefaultCreator.createDateTime()
+                    );
+
+                tour.AddExcursion( excursion );
             }
 
         #endregion
@@ -153,7 +166,7 @@ namespace TravelAgency.UnitsTests
                 tour.ReserveRoom(room);
 
                 Assert.Throws< Exception >(
-                    () => tour.ReserveRoom(room)
+                    () => tour.ReserveRoom( room )
                 );
 
             }
@@ -227,10 +240,31 @@ namespace TravelAgency.UnitsTests
                 );
             }
 
-        #endregion
+            [Test]
+            public void CountryInReservedTicketIsEqualCountryInTour()
+            {
+                var tour = DefaultCreator.createTour();
 
+                var ticket = tour.Airline.GetAvailableTicket()[0];
+                Assert.AreEqual(ticket.ArrivalCountry, tour.Country);
+                Assert.DoesNotThrow(
+                    () => tour.ReserveTicket( ticket )
+                );
+            }
 
-        #region AddHotel
+            [Test]
+            public void CountryInReservedTicketIsNotEqualCountryInTour()
+            {
+                var tour = DefaultCreator.createTour( null, 1000, @"UK" );
+                var depart = DefaultCreator.createDateTime( 2000, 2, 2 );
+                var arrive = DefaultCreator.createDateTime( 2200, 2, 2 );
+                var ticket = DefaultCreator.createTicket( depart, arrive );
+
+                Assert.AreNotEqual(ticket.ArrivalCountry, tour.Country);
+                Assert.Throws< ArgumentException >(
+                    () => tour.ReserveTicket( ticket )
+                );
+            }
 
         #endregion
 
@@ -290,7 +324,7 @@ namespace TravelAgency.UnitsTests
             }
 
             [Test]
-            public void changeAmmounOfPeopleToNonPositive()
+            public void ChangeAmmounOfPeopleToNonPositive()
             {
                 var tour = DefaultCreator.createTour();
 
