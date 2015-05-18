@@ -66,6 +66,22 @@ namespace TravelAgency.UnitsTests
                     );
             }
 
+            public static Guide createGuide(
+                String _language = @"Ukrainian"
+            )
+            {
+                var guide =
+                    new Guide(
+                            @"Test_Guide"
+                        ,    _language
+                        ,   12345678
+                    );
+
+                guide.AddLanguage( @"English" );
+
+                return guide;
+            }
+
         #endregion
 
         #region Airline
