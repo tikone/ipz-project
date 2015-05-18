@@ -13,6 +13,9 @@ namespace TravelAgencyModel
 
         public Airline( String _name )
         {
+            if ( _name.Length == 0 )
+                throw new ArgumentException( @"Customer full name should be filled" );
+
             this.Name = _name;
             m_tickets = new HashSet< Ticket >();
         }

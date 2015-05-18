@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AirlineTests.cs" />
+    <Compile Include="CustomerTests.cs" />
     <Compile Include="DateExtension.cs" />
     <Compile Include="DefaultCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

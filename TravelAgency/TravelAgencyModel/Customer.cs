@@ -21,6 +21,9 @@ namespace TravelAgencyModel
 
         public Customer( string _name, string _surname )
         {
+            if ( _name.Length == 0 || _surname.Length == 0 )
+                throw new ArgumentException( @"Customer full name should be filled" );
+
             Name = _name;
             Surname = _surname;
         }

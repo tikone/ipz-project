@@ -35,7 +35,7 @@ namespace TravelAgencyModel
                 set
                 {
                     if (value < 1)
-                        throw new ArgumentException( "Positive number of people expected" );
+                        throw new ArgumentException( @"Positive number of people expected" );
                     m_amountPeople = value;
                 }
             }
@@ -45,6 +45,8 @@ namespace TravelAgencyModel
         #region private fields
 
             private String m_description;
+
+            private Int32 m_amountPeople;
 
             private HashSet<Excursion> m_excursions;
 
@@ -142,10 +144,5 @@ namespace TravelAgencyModel
 
         #endregion
 
-        #region private fields
-
-            private Int32 m_amountPeople;
-
-        #endregion
     }
 }

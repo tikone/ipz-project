@@ -306,7 +306,7 @@ namespace TravelAgency.UnitsTests
                 var tour = DefaultCreator.createTour();
                 tour.AmountPeople = 2;
 
-                Assert.AreEqual(tour.AmountPeople, 2);
+                Assert.AreEqual( tour.AmountPeople, 2 );
             }
 
         #endregion

@@ -71,10 +71,11 @@ namespace TravelAgency.UnitsTests
         #region Airline
 
             public static Airline createAirline(
-                Int32 _numberOfTickets = 100
+                    Int32 _numberOfTickets = 100
+                ,   String _name = @"test_airline" 
             )
             {
-                var airline = new Airline( @"test_airline" );
+                var airline = new Airline(_name);
 
                 var baseDate = createDateTime();
                 for( Int32 i = 0; i < _numberOfTickets; ++i )
@@ -126,9 +127,12 @@ namespace TravelAgency.UnitsTests
 
         #region Customer
 
-            public static Customer createCustomer()
+            public static Customer createCustomer(
+                    String _name = @"Test_John"
+                ,   String _surname = @"Test_Doe"
+            )
             {
-                return new Customer( @"Test_John", @"Test_Doe");
+                return new Customer( _name, _surname );
             }
 
             public static Customer createRegistrateCustomer()
