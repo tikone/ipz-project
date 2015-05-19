@@ -11,6 +11,24 @@ namespace TravelAgency.UnitsTests
     {
         static Int32 customerId = 0;
 
+        #region Account
+
+        public static Account createAccount(
+                String _login = @"test_login"
+            ,   String _mail = @"test.mail@gmail.ua"
+        )
+        {
+            return
+                new Account(
+                        1
+                    ,   _login
+                    ,   _mail
+                    ,   12345
+                );
+        }
+
+        #endregion
+
         #region Hotel
 
             public static Hotel createHotel(
@@ -158,7 +176,7 @@ namespace TravelAgency.UnitsTests
                 customer.Registrate(
                         ++customerId
                     ,   @"test_log"
-                    ,   @"test_mail"
+                    ,   @"test.mail@gmail.ua"
                     ,   0
                 );
 
