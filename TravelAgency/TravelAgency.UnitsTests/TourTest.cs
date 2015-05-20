@@ -7,6 +7,8 @@ using NUnit.Framework;
 
 using TravelAgencyModel;
 
+using NSubstitute;
+
 namespace TravelAgency.UnitsTests
 {
 
@@ -341,6 +343,19 @@ namespace TravelAgency.UnitsTests
                 tour.AmountPeople = 2;
 
                 Assert.AreEqual( tour.AmountPeople, 2 );
+            }
+
+            [Test]
+            public void SendingTour()
+            {
+                var tour = DefaultCreator.createTour();
+
+                var mockHandler = Substitute.For<EventHandler>();
+                tour.SendingTour += mockHandler;
+
+                tour.SendTourForOperator();
+
+                mockHandler.Received(1).Invoke( tour, EventArgs.Empty );
             }
 
         #endregion

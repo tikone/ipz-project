@@ -8,6 +8,8 @@ namespace TravelAgencyModel
     public class Tour
     {
 
+        public event EventHandler SendingTour;
+
         #region public fields
 
             public DateTime Date_Time { get; set; }
@@ -146,6 +148,12 @@ namespace TravelAgencyModel
                 else
                     throw new Exception( @"this room destroyed/not build yet!" );
 
+            }
+
+            public void SendTourForOperator()
+            {
+                if( SendingTour != null )
+                    SendingTour( this, EventArgs.Empty );
             }
 
         #endregion
