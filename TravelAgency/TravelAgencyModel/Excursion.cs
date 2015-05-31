@@ -10,13 +10,15 @@ namespace TravelAgencyModel
 
         #region public fields
 
+            public int ID { get; private set; }
+
             public String Name { get; set; }
 
             public Double Price { get; set; }
 
             public DateTime Date_Time { get; set; }
 
-            private HashSet< Guide > m_guides;
+            public HashSet< Guide > m_guides { get; private set; }
 
         #endregion
 
