@@ -1,0 +1,12 @@
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\bin\Debug\TravelAgencyOrmDemoApp.exe.config
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\bin\Debug\TravelAgencyOrmDemoApp.exe
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\bin\Debug\TravelAgencyOrmDemoApp.pdb
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\obj\Debug\TravelAgencyOrmDemoApp.exe
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\obj\Debug\TravelAgencyOrmDemoApp.pdb
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\bin\Debug\TravelAgencyOrm.dll
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\bin\Debug\EntityFramework.dll
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\bin\Debug\TravelAgencyModel.dll
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\bin\Debug\TravelAgencyOrm.pdb
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\bin\Debug\EntityFramework.xml
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\bin\Debug\TravelAgencyModel.pdb
+D:\ipz-project\TravelAgency\TravelAgencyOrmDemoApp\obj\Debug\TravelAgencyOrmDemoApp.csprojResolveAssemblyReference.cache

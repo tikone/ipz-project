@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{51A3AF
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencyOrmDemoApp", "TravelAgencyOrmDemoApp\TravelAgencyOrmDemoApp.csproj", "{F6C9BBB7-2250-44AF-9AFA-96F6F7454F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencyOrm", "TravelAgencyOrm\TravelAgencyOrm.csproj", "{AC68CD51-10F5-48B9-879F-468E28BB62EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +60,26 @@ Global
 		{14F87CE7-E9BF-4F41-9BCD-DD9FB4A48B59}.Release|ARM.ActiveCfg = Release|Any CPU
 		{14F87CE7-E9BF-4F41-9BCD-DD9FB4A48B59}.Release|x64.ActiveCfg = Release|Any CPU
 		{14F87CE7-E9BF-4F41-9BCD-DD9FB4A48B59}.Release|x86.ActiveCfg = Release|Any CPU
+		{F6C9BBB7-2250-44AF-9AFA-96F6F7454F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C9BBB7-2250-44AF-9AFA-96F6F7454F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C9BBB7-2250-44AF-9AFA-96F6F7454F3C}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{F6C9BBB7-2250-44AF-9AFA-96F6F7454F3C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F6C9BBB7-2250-44AF-9AFA-96F6F7454F3C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F6C9BBB7-2250-44AF-9AFA-96F6F7454F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C9BBB7-2250-44AF-9AFA-96F6F7454F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C9BBB7-2250-44AF-9AFA-96F6F7454F3C}.Release|ARM.ActiveCfg = Release|Any CPU
+		{F6C9BBB7-2250-44AF-9AFA-96F6F7454F3C}.Release|x64.ActiveCfg = Release|Any CPU
+		{F6C9BBB7-2250-44AF-9AFA-96F6F7454F3C}.Release|x86.ActiveCfg = Release|Any CPU
+		{AC68CD51-10F5-48B9-879F-468E28BB62EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC68CD51-10F5-48B9-879F-468E28BB62EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC68CD51-10F5-48B9-879F-468E28BB62EC}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{AC68CD51-10F5-48B9-879F-468E28BB62EC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AC68CD51-10F5-48B9-879F-468E28BB62EC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AC68CD51-10F5-48B9-879F-468E28BB62EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC68CD51-10F5-48B9-879F-468E28BB62EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC68CD51-10F5-48B9-879F-468E28BB62EC}.Release|ARM.ActiveCfg = Release|Any CPU
+		{AC68CD51-10F5-48B9-879F-468E28BB62EC}.Release|x64.ActiveCfg = Release|Any CPU
+		{AC68CD51-10F5-48B9-879F-468E28BB62EC}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
