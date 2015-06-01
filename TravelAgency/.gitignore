@@ -6,5 +6,9 @@
 /TravelAgency.UnitsTests/bin
 /packages
 /.nuget
+/TravelAgencyOrm/bin
+/TravelAgencyOrm/obj
+/TravelAgencyOrmDemoApp/bin
+/TravelAgencyOrmDemoApp/obj
 /TravelAgency.UnitsTests/packages.config
 /TravelAgency.v12.suo
