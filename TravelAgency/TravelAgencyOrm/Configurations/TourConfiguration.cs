@@ -9,7 +9,12 @@ namespace TravelAgencyOrm.Configurations
     {
         public TourConfiguration()
         {
-
+            HasKey( t => t.TourID );
+            HasRequired( t => t.Hotel );
+            HasRequired( t => t.Airline );
+            HasMany< Excursion >( t => t.GetExcursion() ).WithRequired();
+            HasMany< Ticket >( t => t.Tickets ).WithRequired();
+            HasMany< Room >( t => t.Rooms ).WithRequired();
         }
     }
 }
