@@ -49,8 +49,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\AccountConfiguration.cs" />
+    <Compile Include="Configurations\AirlineConfiguration.cs" />
+    <Compile Include="Configurations\CustomerConfiguration.cs" />
+    <Compile Include="Configurations\ExcursionConfiguration.cs" />
+    <Compile Include="Configurations\GuideConfiguration.cs" />
+    <Compile Include="Configurations\HotelConfiguration.cs" />
+    <Compile Include="Configurations\RoomConfiguration.cs" />
+    <Compile Include="Configurations\TicketConfiguration.cs" />
     <Compile Include="Configurations\TourConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveRestoreController.cs" />
     <Compile Include="TravelAgencyDbContext.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,9 +12,12 @@ namespace TravelAgencyOrm.Configurations
             HasKey( t => t.TourID );
             HasRequired( t => t.Hotel );
             HasRequired( t => t.Airline );
-            HasMany< Excursion >( t => t.GetExcursion() ).WithRequired();
-            HasMany< Ticket >( t => t.Tickets ).WithRequired();
-            HasMany< Room >( t => t.Rooms ).WithRequired();
+            HasMany< Excursion >( t => t.GetExcursion() ).WithOptional();
+
+            Property( t => t.AmountPeople ).IsRequired();
+            Property( t => t.Country ).IsRequired();
+            Property( t => t.Date_Time ).IsRequired();
+            Property( t => t.Price ).IsRequired();
         }
     }
 }

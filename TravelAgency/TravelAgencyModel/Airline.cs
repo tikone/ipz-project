@@ -7,9 +7,11 @@ namespace TravelAgencyModel
 {
     public class Airline
     {
+        public Int32 AirlineID { get; set; }
+
         public String Name { get; private set; }
 
-        private HashSet< Ticket > m_tickets;
+        public HashSet<Ticket> Tickets {get; private set; }
 
         public Airline( String _name )
         {
@@ -17,19 +19,19 @@ namespace TravelAgencyModel
                 throw new ArgumentException( @"Customer full name should be filled" );
 
             this.Name = _name;
-            m_tickets = new HashSet< Ticket >();
+            Tickets = new HashSet< Ticket >();
         }
 
         #region public methods
 
             public void AddTicket( Ticket _ticket )
             {
-                m_tickets.Add( _ticket );
+                Tickets.Add( _ticket );
             }
 
             public Boolean CheckTicket( Ticket _ticket )
             {
-                if( m_tickets.Contains( _ticket ) )
+                if( Tickets.Contains( _ticket ) )
                     return _ticket.Reserved;
                 else
                     throw new Exception( @"ticket not from this airline" );
@@ -39,7 +41,7 @@ namespace TravelAgencyModel
             {
                 List< Ticket > tickets = new List< Ticket >();
 
-                foreach( var tik in m_tickets )
+                foreach( var tik in Tickets )
                     if( !tik.Reserved )
                         tickets.Add( tik );
 

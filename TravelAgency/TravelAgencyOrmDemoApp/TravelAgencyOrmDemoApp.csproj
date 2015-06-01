@@ -39,6 +39,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TravelAgencyModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TravelAgencyModel\bin\Debug\TravelAgencyModel.dll</HintPath>
+    </Reference>
     <Reference Include="TravelAgencyOrm">
       <HintPath>..\TravelAgencyOrm\bin\Debug\TravelAgencyOrm.dll</HintPath>
     </Reference>
