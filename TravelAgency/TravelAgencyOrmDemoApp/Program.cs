@@ -11,8 +11,6 @@ namespace TravelAgencyOrmDemoApp
     {
         public static void Main( string[] args )
         {
-            Program p = new Program();
-
             TravelAgency savedTravelAgency = new TravelAgency();
 
             new TestModelGenerator( savedTravelAgency );

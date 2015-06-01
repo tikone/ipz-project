@@ -1,5 +1,7 @@
 ﻿using TravelAgencyModel;
 
+using System.Data.Entity;
+
 using System.Data.Entity.ModelConfiguration;
 
 namespace TravelAgencyOrm
@@ -22,11 +24,11 @@ namespace TravelAgencyOrm
 
             using( var context = new TravelAgencyDbContext() )
             {
-                //var customerQuery =
-                //    context.Customers.Include( c => c.Account );
+                var customerQuery =
+                    context.Customers.Include( c => c.Account );
 
-                //foreach( Customer customer in customerQuery )
-                //    travelAgency.addCustomer( customer );
+                foreach( Customer customer in customerQuery )
+                    travelAgency.addCustomer( customer );
             }
 
             return travelAgency;
