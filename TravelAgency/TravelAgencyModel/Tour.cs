@@ -30,6 +30,8 @@ namespace TravelAgencyModel
 
             public Airline Airline { get; private set; }
 
+            public HashSet<Excursion> m_excursions { get; private set; }
+
             public Int32 AmountPeople
             {
                 get
@@ -51,8 +53,6 @@ namespace TravelAgencyModel
             private String m_description;
 
             private Int32 m_amountPeople;
-
-            private HashSet<Excursion> m_excursions;
 
         #endregion
 
