@@ -34,7 +34,6 @@ namespace TravelAgencyModel
             ,   TicketType _type
         )
         {
-//
             this.Departure = _departure;
             this.ArrivalDate = _arrivalDate;
             this.NumberOfAirplane = _numberOfAirplane;
@@ -42,6 +41,8 @@ namespace TravelAgencyModel
             this.Type = _type;
             this.Reserved = false;
         }
+
+        private Ticket() { }
 
         #region override
 

@@ -33,7 +33,7 @@ namespace TravelAgencyModel
                 showAccount( _customer.Account );
         }
 
-         private void showAccount( Account _account )
+        private void showAccount( Account _account )
         {
             output.WriteLine();
             output.WriteLine( "===Account Information===" );
@@ -44,8 +44,8 @@ namespace TravelAgencyModel
 
             output.WriteLine();
             output.WriteLine( "===History===" );
-            foreach( var tour in _account.History )
-                showOrderedTours( tour );
+            foreach (var tour in _account.History)
+                showOrderedTours(tour);
 
             output.WriteLine("\n***End History************************\n");
         }

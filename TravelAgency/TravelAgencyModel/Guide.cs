@@ -49,6 +49,8 @@ namespace TravelAgencyModel
                 this.Languages = _lanuage;
             }
 
+            private Guide() { }
+
         #endregion
 
         #region public methods

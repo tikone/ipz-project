@@ -24,6 +24,8 @@ namespace TravelAgencyModel
 
         #region constructors
 
+            private Excursion() { }
+
             public Excursion(
                     String _name
                 ,   Double _price

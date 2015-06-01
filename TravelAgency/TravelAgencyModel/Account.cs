@@ -17,7 +17,7 @@ namespace TravelAgencyModel
 
             public int PasswordHash { get; set; }
 
-            public HashSet< Tour > History { get; private set; }
+            public ICollection< Tour > History { get; private set; }
 
         #endregion
 
@@ -35,6 +35,8 @@ namespace TravelAgencyModel
             Mail = _mail;
             PasswordHash = _passwordHash;
         }
+
+        private Account() { }
 
         public void AddTour( Tour _tour )
         {

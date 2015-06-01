@@ -22,6 +22,8 @@ namespace TravelAgencyModel
             Tickets = new HashSet< Ticket >();
         }
 
+        private Airline() { }
+
         #region public methods
 
             public void AddTicket( Ticket _ticket )

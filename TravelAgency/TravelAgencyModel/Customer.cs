@@ -21,6 +21,8 @@ namespace TravelAgencyModel
 
         #endregion
 
+        private Customer() { }
+
         public Customer( string _name, string _surname )
         {
             if ( _name.Length == 0 || _surname.Length == 0 )

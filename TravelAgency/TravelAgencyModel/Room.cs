@@ -36,6 +36,7 @@ namespace TravelAgencyModel
             this.TypeOfRoom = _typeOfRoom;
         }
 
+        private Room() { }
 
         #region override
 

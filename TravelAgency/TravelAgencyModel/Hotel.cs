@@ -20,7 +20,7 @@ namespace TravelAgencyModel
 
         #endregion
 
-        #region public constructor
+        #region constructor
 
             public Hotel(
                     String _name
@@ -35,6 +35,9 @@ namespace TravelAgencyModel
 
                 this.Rooms = _rooms;
             }
+
+            private Hotel() { }
+
         #endregion
 
         #region public methods
