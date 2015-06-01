@@ -8,23 +8,22 @@ namespace TravelAgencyModel
 {
     public class TravelAgency
     {
+        public IList< Customer > Customers{ get; private set; }
+
         public TravelAgency()
         {
-            customers = new List<Customer>();
+            Customers = new List< Customer >();
         }
 
-        public void addCustomer( Customer _customer)
+        public void addCustomer( Customer _customer )
         {
-            customers.Add( _customer );
+            Customers.Add( _customer );
         }
 
         public void forEachCustomer( Action< Customer > _function )
         {
-            foreach( var customer in customers )
+            foreach( var customer in Customers )
                 _function( customer );
         }
-
-        private List< Customer > customers;
-
     }
 }
