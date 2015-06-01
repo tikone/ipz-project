@@ -37,7 +37,7 @@ namespace TravelAgencyOrmDemoApp
         private static String generateModelReport( TravelAgency _travelAgency )
         {
             StringWriter writer = new StringWriter( new StringBuilder() );
-            ModelReporter reporter = new ModelReporter( Console.Out, _travelAgency );
+            ModelReporter reporter = new ModelReporter( writer, _travelAgency );
             reporter.generate();
 
             return writer.ToString();
