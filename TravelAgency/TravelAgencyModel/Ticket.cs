@@ -10,6 +10,8 @@ namespace TravelAgencyModel
 
         #region public fields
 
+            public Int32 TicketID { get; set; }
+
             public DateTime Departure { get; set; }
 
             public DateTime ArrivalDate { get; set; }

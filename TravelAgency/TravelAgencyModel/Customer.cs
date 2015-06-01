@@ -11,6 +11,8 @@ namespace TravelAgencyModel
 
         #region public fields
 
+            public Int32 CustomerID { get; set; }
+
             public string Name { get; private set; }
 
             public string Surname { get; private set; }

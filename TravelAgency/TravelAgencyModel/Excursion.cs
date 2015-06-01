@@ -10,13 +10,15 @@ namespace TravelAgencyModel
 
         #region public fields
 
+            public Int32 ExcursionID { get; set; }
+
             public String Name { get; set; }
 
             public Double Price { get; set; }
 
             public DateTime Date_Time { get; set; }
 
-            private HashSet< Guide > m_guides;
+            public HashSet<Guide> Guides { get; set; }
 
         #endregion
 
@@ -35,7 +37,7 @@ namespace TravelAgencyModel
                 this.Price = _price;
                 this.Date_Time = _dateTime;
 
-                m_guides = new HashSet< Guide >();
+                Guides = new HashSet<Guide>();
             }
 
         #endregion
@@ -46,7 +48,7 @@ namespace TravelAgencyModel
             {
                 HashSet< String > languages = new HashSet< String >();
 
-                foreach( Guide guide in m_guides )
+                foreach( Guide guide in Guides )
                     if( guide.Available )
                         foreach( var lan in guide.Languages.ToArray() )
                             languages.Add( lan );
@@ -56,18 +58,18 @@ namespace TravelAgencyModel
 
             public void addGuide( Guide _guide )
             {
-                if( m_guides.Contains( _guide ) )
+                if ( Guides.Contains(_guide))
                     throw new Exception( @"not unique guide in one excursion." );
 
-                m_guides.Add( _guide );
+                Guides.Add(_guide);
             }
 
             public List<Guide> getAvailableGuides()
             {
                 List<Guide> guides = new List<Guide>();
 
-                foreach (Guide guide in m_guides)
-                    if (guide.Available)
+                foreach( Guide guide in Guides )
+                    if( guide.Available )
                         guides.Add( guide );
 
                 return guides.ToList();
