@@ -11,8 +11,6 @@ namespace TravelAgencyModel
 
         #region public fields
 
-            public int ID { get; private set; }
-
             public string Name { get; private set; }
 
             public string Surname { get; private set; }

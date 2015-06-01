@@ -44,12 +44,11 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TravelAgencyModel">
+      <HintPath>..\TravelAgencyModel\bin\Debug\TravelAgencyModel.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configurations\AccountConfiguration.cs" />
-    <Compile Include="Configurations\AirlineConfiguration.cs" />
-    <Compile Include="Configurations\CustomerConfiguration.cs" />
-    <Compile Include="Configurations\ExcurssionConfiguration.cs" />
     <Compile Include="Configurations\TourConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TravelAgencyDbContext.cs" />
@@ -57,12 +56,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TravelAgencyModel\TravelAgencyModel.csproj">
-      <Project>{acc0a8ff-d9d2-4c7e-8b9e-fe7b42f41661}</Project>
-      <Name>TravelAgencyModel</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

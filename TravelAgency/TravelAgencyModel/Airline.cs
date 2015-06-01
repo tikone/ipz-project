@@ -7,11 +7,9 @@ namespace TravelAgencyModel
 {
     public class Airline
     {
-        public int ID { get; private set; }
-
         public String Name { get; private set; }
 
-        public HashSet< Ticket > m_tickets { get; private set; }
+        private HashSet< Ticket > m_tickets;
 
         public Airline( String _name )
         {
