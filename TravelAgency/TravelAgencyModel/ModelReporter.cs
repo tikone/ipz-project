@@ -44,8 +44,8 @@ namespace TravelAgencyModel
 
             output.WriteLine();
             output.WriteLine( "===History===" );
-            foreach (var tour in _account.History)
-                showOrderedTours(tour);
+            //foreach (var tour in _account.History)
+                //showOrderedTours(tour);
 
             output.WriteLine("\n***End History************************\n");
         }
