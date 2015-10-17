@@ -10,7 +10,7 @@ namespace TravelAgencyOrm.Configurations
         public AccountConfiguration()
         {
             HasKey( a => a.ID );
-            HasMany< Tour >( a => a.History ).WithRequired();
+            HasMany< TourOrder >( a => a.History ).WithRequired();
 
             Property( a => a.Mail ).IsRequired();
             Property( a => a.PasswordHash ).IsRequired();

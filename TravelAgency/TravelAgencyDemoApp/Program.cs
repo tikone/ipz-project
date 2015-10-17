@@ -16,13 +16,13 @@ namespace TravelAgencyDemoApp
 
         private void fillTestModel()
         {
-            new TestModelGenerator( travelAgency );
+            //new TestModelGenerator( travelAgency );
         }
 
         private void generateModelReport()
         {
-            ModelReporter reporter = new ModelReporter( Console.Out, travelAgency );
-            reporter.generate();
+            //ModelReporter reporter = new ModelReporter( Console.Out, travelAgency );
+            //reporter.generate();
         }
 
        private TravelAgency travelAgency = new TravelAgency();

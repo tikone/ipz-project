@@ -6,7 +6,7 @@ using System.Text;
 namespace TravelAgencyModel
 {
     public class TestModelGenerator
-    {
+    {/*
         public TestModelGenerator( TravelAgency _travelAgency )
         {
 
@@ -91,7 +91,7 @@ namespace TravelAgencyModel
             airline.AddTicket(tick2);
 
             return airline;
-        }
+        }*/
 
     }
 }

@@ -8,7 +8,7 @@ using System.Linq;
 namespace TravelAgencyModel
 {
     public class ModelReporter
-    {
+    {/*
         public ModelReporter(
                 TextWriter _output
             ,   TravelAgency _travelAgency
@@ -93,6 +93,6 @@ namespace TravelAgencyModel
 
         private TextWriter output;
         private TravelAgency travelAgency;
-        private CultureInfo culture = new CultureInfo("pt-BR");
+        private CultureInfo culture = new CultureInfo("pt-BR");*/
     }
 }

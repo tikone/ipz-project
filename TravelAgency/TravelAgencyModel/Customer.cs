@@ -54,12 +54,12 @@ namespace TravelAgencyModel
                 return true;
             }
 
-            public void addTour( Tour _tour )
+            public void addTour( TourOrder _tour )
             {
                 if( !IsRegistered() )
                     return;
 
-                Account.AddTour( _tour );
+                Account.AddTourOrder(_tour);
 
             }
 

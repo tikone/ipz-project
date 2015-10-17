@@ -68,10 +68,10 @@ namespace TravelAgency.UnitsTests
                 var customer = DefaultCreator.createRegistrateCustomer();
                 var tour = DefaultCreator.createTour();
 
-                customer.addTour( tour );
+                //customer.addTour( tour );
 
                 Assert.NotNull( customer.Account );
-                Assert.IsTrue( customer.Account.History.Contains( tour ) );
+                Assert.IsTrue( false /*customer.Account.History.Contains( tour )*/ );
 
             }
 

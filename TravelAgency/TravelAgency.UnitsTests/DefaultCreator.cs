@@ -188,12 +188,12 @@ namespace TravelAgency.UnitsTests
         #region Tour
 
             public static Tour createTour(
-                    Hotel _hotel = null
-                ,   Double _price = 999.9
-                ,   String _country = @"UA"
+                    String _country = @"UA"
+                ,   String _description = @"description"
             )
             {
-                return
+                return new Tour( _country, _description, TourType.Beer);
+                /*return
                     new Tour(
                             createDateTime()
                         ,   _price
@@ -204,6 +204,21 @@ namespace TravelAgency.UnitsTests
                             ?   _hotel
                             :   createHotel()
                         ,   createAirline()
+                    );*/
+            }
+
+            public static TourOrder createTourOrder(
+                    Tour _tour
+                ,   Double _price = 999.9
+                ,   Int32 _amountPeople = 1
+            )
+            {
+                return
+                    new TourOrder(
+                            _tour
+                        ,   createDateTime()
+                        ,   _price
+                        ,   _amountPeople
                     );
             }
 

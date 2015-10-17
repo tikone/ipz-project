@@ -10,14 +10,14 @@ namespace TravelAgencyOrm.Configurations
         public TourConfiguration()
         {
             HasKey( t => t.TourID );
-            HasRequired( t => t.Hotel );
-            HasRequired( t => t.Airline );
-            HasMany< Excursion >( t => t.m_excursions ).WithOptional();
+            //HasRequired( t => t.Hotel );
+            //HasRequired( t => t.Airline );
+            //HasMany< Excursion >( t => t.m_excursions ).WithOptional();
 
-            Property( t => t.AmountPeople ).IsRequired();
+            //Property( t => t.AmountPeople ).IsRequired();
             Property( t => t.Country ).IsRequired();
-            Property( t => t.Date_Time ).IsRequired();
-            Property( t => t.Price ).IsRequired();
+            //Property( t => t.Date_Time ).IsRequired();
+            //Property( t => t.Price ).IsRequired();
         }
     }
 }
