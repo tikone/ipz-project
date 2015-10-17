@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace TravelAgencyOrm
 {
-    class TravelAgencyDbContext
+    public class TravelAgencyDbContext
         :   DbContext
     {
         #region constructors
@@ -14,7 +14,7 @@ namespace TravelAgencyOrm
             static TravelAgencyDbContext()
             {
                 Database.SetInitializer(
-                    new DropCreateDatabaseIfModelChanges< TravelAgencyDbContext >()
+                    new DropCreateDatabaseAlways< TravelAgencyDbContext >()
                 );
             }
 
@@ -22,7 +22,21 @@ namespace TravelAgencyOrm
 
         #region public fields
 
+            public DbSet< Account > Accounts { get; set; }
+
+            public DbSet< Airline > Airline { get; set; }
+
             public DbSet< Customer > Customers { get; set; }
+
+            public DbSet< Tour> Tours { get; set; }
+
+            public DbSet< Excursion > Excursions { get; set; }
+
+            public DbSet< Hotel > Hotels { get; set; }
+
+            public DbSet< Room > Rooms { get; set; }
+
+            public DbSet< Ticket > Tickets { get; set; }
 
         #endregion
 
