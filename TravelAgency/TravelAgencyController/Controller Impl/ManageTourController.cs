@@ -26,7 +26,7 @@ namespace TravelAgencyController.Controller
         {
             Tour tour = new Tour( _country, _description, _type );
             m_tourRepository.Add( tour );
-
+            m_tourRepository.Commit();
             return tour.TourID;
 
         }
@@ -36,6 +36,7 @@ namespace TravelAgencyController.Controller
             Tour tour = FindObjectById( m_tourRepository, _id );
 
             tour.Country = _country;
+            m_tourRepository.Commit();
         }
 
         public void UpdateDescription(Int32 _id, String _description)
@@ -43,6 +44,7 @@ namespace TravelAgencyController.Controller
             Tour tour = FindObjectById(m_tourRepository, _id);
 
             tour.Description = _description;
+            m_tourRepository.Commit();
         }
 
         public void UpdateType(Int32 _id, TourType _type)
@@ -50,6 +52,7 @@ namespace TravelAgencyController.Controller
             Tour tour = FindObjectById(m_tourRepository, _id);
 
             tour.Type = _type;
+            m_tourRepository.Commit();
         }
 
         private ITourRepository m_tourRepository;
