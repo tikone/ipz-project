@@ -54,8 +54,9 @@
     <Compile Include="Controller Api\IManageTourController.cs" />
     <Compile Include="Controller Api\IOrderController.cs" />
     <Compile Include="Controller Impl\AirlineController.cs" />
-    <Compile Include="Controller Impl\BasicController.cs" />
     <Compile Include="Controller Impl\HotelController.cs" />
+    <Compile Include="Controller Impl\BasicController.cs" />
+    <Compile Include="Controller Impl\ManageTourController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
