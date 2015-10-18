@@ -28,6 +28,8 @@ namespace TravelAgencyOrm
 
             public DbSet< Customer > Customers { get; set; }
 
+            public DbSet< TourOrder > TourOrder { get; set; }
+
             public DbSet< Tour> Tours { get; set; }
 
             public DbSet< Excursion > Excursions { get; set; }
@@ -53,6 +55,7 @@ namespace TravelAgencyOrm
                 modelBuilder.Configurations.Add( new RoomConfiguration() );
                 modelBuilder.Configurations.Add( new TicketConfiguration() );
                 modelBuilder.Configurations.Add( new TourConfiguration() );
+                modelBuilder.Configurations.Add( new TourOrderConfiguration() );
             }
 
          #endregion
