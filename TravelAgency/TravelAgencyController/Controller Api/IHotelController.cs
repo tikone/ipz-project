@@ -11,18 +11,24 @@ namespace TravelAgencyController.Controller
     public interface IHotelController : IDisposable
     {
 
-        Hotel[] GetAllHotels ( bool _withHidden = true );
+        Hotel[] GetAllHotels( bool _withHidden = true );
 
-        void CreateNewHotel (
+        void AddNewHotelToDB(
                 String _name
             ,   String _address
             ,   HotelType _type
             ,   HashSet< Room > _rooms
         );
 
-        void Rename ( String _hotelName, String _newName );
+        void RemoveHotelFromDB( Int32 _hotelID );
 
-        void UpdateType( String _hotelName, HotelType _type );
+        List< Room > GetNotReservedRooms();
+
+        void ReserveRoom( Int32 _hotelID, Room _room );
+
+        void Rename( Int32 _hotelID, String _newName );
+
+        void UpdateHotelType( Int32 _hotelID, HotelType _type );
 
     }
 }

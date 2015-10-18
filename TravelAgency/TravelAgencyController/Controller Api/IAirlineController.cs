@@ -10,14 +10,14 @@ namespace TravelAgencyController.Controller
 {
     public interface IAirlineController
     {
-        Airline[] GetAllHotels(bool _withHidden = true);
+        Airline[] GetAllAirlines( bool _withHidden = true );
 
-        void Airline( String _name );
+        void AddNewAirlaneToDB( String _name );
 
-        void Rename( Int32 _id, String _newName);
+        void Rename( Int32 _airlineID, String _newName );
 
         void AddTicket( Ticket _ticket );
 
-
+        List< Ticket > GetAvailableTickets( Int32 _airlineID );
     }
 }

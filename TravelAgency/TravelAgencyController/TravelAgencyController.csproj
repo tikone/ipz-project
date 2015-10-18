@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller Api\IAirlineController.cs" />
+    <Compile Include="Controller Api\IHotelController.cs" />
     <Compile Include="Controller Api\IManageTourController.cs" />
     <Compile Include="Controller Api\IOrderController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
