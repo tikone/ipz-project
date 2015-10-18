@@ -12,6 +12,8 @@ namespace TravelAgencyOrm
 
         void Add( T _element );
 
+        void Remove( T obj );
+
         void Commit();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Data.Entity;
 using System.Linq;
+
+using System.Data.Entity;
 
 namespace TravelAgencyOrm
 {
@@ -28,10 +29,37 @@ namespace TravelAgencyOrm
             dbSet.Add( obj );
         }
 
+        public void Remove( T obj )
+        {
+            dbSet.Remove( obj );
+        }
+
         public void Commit ()
         {
             dbContext.ChangeTracker.DetectChanges();
             dbContext.SaveChanges();
+        }
+
+        public void RevertChanges()
+        {
+            foreach ( System.Data.Entity.Infrastructure.DbEntityEntry<  T> entry in 
+                dbContext.ChangeTracker.Entries<T>() )
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Modified:
+                        entry.State = EntityState.Unchanged;
+                        break;
+                    case EntityState.Deleted:
+                        entry.Reload();
+                        break;
+                    case EntityState.Added:
+                        entry.State = EntityState.Detached;
+                        break;
+                    default: 
+                        break;
+                }
+            } 
         }
 
         public IQueryable< T > LoadAll ()

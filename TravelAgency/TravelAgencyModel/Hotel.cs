@@ -10,11 +10,11 @@ namespace TravelAgencyModel
 
         #region public fields
 
-            public Int32 HotelID { get; set; }
+            public Int32 ID { get; set; }
 
-            public String Name { get; set; }
+            public String Name { get; private set; }
 
-            public String Address { get; set; }
+            public String Address { get; private set; }
 
             public HotelType Type { get; set; }
 

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 
 using TravelAgencyModel;
@@ -10,7 +9,10 @@ namespace TravelAgencyController.Controller
     {
         Airline[] GetAllAirlines( bool _withHidden = true );
 
-        Int32 AddNewAirlaneToDB( String _name );
+        // Returns ID may be 0 lookup this code, same for hotel
+        Int32 AddNewAirlineToDB( String _name );
+
+        void RemoveAirlineFromDB( Int32 _airlineID );
 
         void AddTicket( Ticket _ticket, Int32 _airlineID );
 
