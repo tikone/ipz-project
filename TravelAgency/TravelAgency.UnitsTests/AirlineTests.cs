@@ -55,7 +55,7 @@ namespace TravelAgency.UnitsTests
                 airline.AddTicket( ticket );
                 airline.AddTicket( ticket2 );
 
-                var unreservedTicketCollection = airline.GetAvailableTicket();
+                var unreservedTicketCollection = airline.GetAvailableTickets();
 
                 Assert.True( unreservedTicketCollection.Count == 1 );
                 Assert.True( unreservedTicketCollection.Contains( ticket ) );

@@ -2,42 +2,42 @@
 {
     public static class RepositoryFactory
     {
-        public static IAccountRepository createAccountRepository( TravelAgencyDbContext dbContext )
+        public static IAccountRepository CreateAccountRepository( TravelAgencyDbContext dbContext )
         {
             return new AccountRepository( dbContext );
         }
 
-        public static IAirlineRepository createAirlineRepository( TravelAgencyDbContext dbContext )
+        public static IAirlineRepository CreateAirlineRepository( TravelAgencyDbContext dbContext )
         {
             return new AirlineRepository( dbContext );
         }
 
-        public static ICustomerRepository createCustomerRepository( TravelAgencyDbContext dbContext )
+        public static ICustomerRepository CreateCustomerRepository( TravelAgencyDbContext dbContext )
         {
             return new CustomerRepository( dbContext );
         }
 
-        public static IExcursionRepository createExcursionRepository( TravelAgencyDbContext dbContext )
+        public static IExcursionRepository CreateExcursionRepository( TravelAgencyDbContext dbContext )
         {
             return new ExcursionRepository( dbContext );
         }
 
-        public static IHotelRepository createHotelRepository( TravelAgencyDbContext dbContext )
+        public static IHotelRepository CreateHotelRepository( TravelAgencyDbContext dbContext )
         {
             return new HotelRepository( dbContext );
         }
 
-        public static ITourRepository createTourRepository( TravelAgencyDbContext dbContext )
+        public static ITourRepository CreateTourRepository( TravelAgencyDbContext dbContext )
         {
             return new TourRepository( dbContext );
         }
 
-        public static IRoomRepository createRoomRepository( TravelAgencyDbContext dbContext )
+        public static IRoomRepository CreateRoomRepository( TravelAgencyDbContext dbContext )
         {
             return new RoomRepository( dbContext );
         }
 
-        public static ITicketRepository createTicketRepository( TravelAgencyDbContext dbContext )
+        public static ITicketRepository CreateTicketRepository( TravelAgencyDbContext dbContext )
         {
             return new TicketRepository( dbContext );
         }

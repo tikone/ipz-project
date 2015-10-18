@@ -7,7 +7,7 @@ namespace TravelAgencyModel
 {
     public class Airline
     {
-        public Int32 AirlineID { get; set; }
+        public Int32 ID { get; set; }
 
         public String Name { get; private set; }
 
@@ -39,7 +39,7 @@ namespace TravelAgencyModel
                     throw new Exception( @"ticket not from this airline" );
             }
 
-            public List< Ticket > GetAvailableTicket()
+            public List< Ticket > GetAvailableTickets()
             {
                 List< Ticket > tickets = new List< Ticket >();
 
