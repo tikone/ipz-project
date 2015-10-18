@@ -18,27 +18,38 @@ namespace TravelAgencyController.Controller
             return m_tourRepository.LoadAll().ToArray();
         }
 
-        int void CreateNewTour(
+        public Int32 CreateNewTour(
                 String _country
             ,   String _description
             ,   TourType _type
         )
         {
+            Tour tour = new Tour( _country, _description, _type );
+            m_tourRepository.Add( tour );
+
+            return tour.TourID;
 
         }
 
-        public void UpdateCountry(String _country)
+        public void UpdateCountry(Int32 _id, String _country)
         {
+            Tour tour = FindObjectById( m_tourRepository, _id );
+
+            tour.Country = _country;
         }
 
-        public void UpdateDescription(String _description)
+        public void UpdateDescription(Int32 _id, String _description)
         {
+            Tour tour = FindObjectById(m_tourRepository, _id);
 
+            tour.Description = _description;
         }
 
-        public void UpdateType(TourType _type)
+        public void UpdateType(Int32 _id, TourType _type)
         {
+            Tour tour = FindObjectById(m_tourRepository, _id);
 
+            tour.Type = _type;
         }
 
         private ITourRepository m_tourRepository;

@@ -16,14 +16,10 @@ namespace TravelAgencyModel
 
             public TourType Type { get; set; }
 
-        #endregion
-
-        #region private fields
-
-            private String m_description;
+            public String Description { get; set; }
 
         #endregion
-
+        
         #region constructors
 
             public Tour(
@@ -36,7 +32,7 @@ namespace TravelAgencyModel
                     throw new ArgumentException( "Country should be filled" );
 
                 this.Country = _country;
-                this.m_description = _description;
+                this.Description = _description;
                 this.Type = _type;
 
             }
@@ -49,7 +45,7 @@ namespace TravelAgencyModel
 
             public String ViewInfo()
             {
-                return m_description;
+                return Description;
             }
 
         #endregion

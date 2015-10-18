@@ -8,17 +8,17 @@ namespace TravelAgencyController.Controller
     {
         Tour[] GetAllTours ();
 
-        void CreateNewTour(
+        Int32 CreateNewTour(
                 String _country
             ,   String _description
             ,   TourType _type
         );
 
-        void UpdateCountry( String _country );
+        void UpdateCountry( Int32 _id, String _country );
 
-        void UpdateDescription(String _description);
+        void UpdateDescription( Int32 _id, String _description);
 
-        void UpdateType( TourType _type );
+        void UpdateType( Int32 _id, TourType _type );
 
     }
 }
