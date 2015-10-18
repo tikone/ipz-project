@@ -12,7 +12,7 @@ namespace TravelAgencyModel
 
         #region public fields
 
-            public Int32 TourID { get; set; }
+            public Int32 TourOrderID { get; set; }
 
             public DateTime Date_Time { get; set; }
 

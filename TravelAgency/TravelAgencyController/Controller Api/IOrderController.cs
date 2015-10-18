@@ -4,10 +4,21 @@ using TravelAgencyModel;
 
 namespace TravelAgencyController.Controller
 {
-    interface IOrderController : IDisposable
+    public interface IOrderController : IDisposable
     {
 
-        //To
+        TourOrder[] GetAllOrders ();
+
+        void CreateNewTourOrder(
+                Tour _tour
+            ,   DateTime _dateTime
+            ,   Double _price
+            ,   Int32 _amountPeople = 1
+        );
+
+        void UpdateDateTime( Int32 _id, DateTime _dateTime );
+
+        void DropOrder( Int32 _id );
 
     }
 }
