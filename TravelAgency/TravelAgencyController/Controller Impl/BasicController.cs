@@ -28,6 +28,24 @@ namespace TravelAgencyController.Controller
                 m_dbContext.Dispose();
         }
 
+        public static T FindObjectById< T >( 
+              IRepository< T > _repository
+            , int _objectID
+        )
+            where T : class
+        {
+            T result = _repository.Load( _objectID );
+            if (result == null)
+                throw new SystemException(
+                      typeof(T).Name
+                    + " with #" 
+                    + _objectID 
+                    + " could't find in database"
+                );
+
+            return result;
+        }
+
         private TravelAgencyDbContext m_dbContext;
 
     }

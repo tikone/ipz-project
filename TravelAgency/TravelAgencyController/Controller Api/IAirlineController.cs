@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 
 using TravelAgencyModel;
 
@@ -12,11 +10,9 @@ namespace TravelAgencyController.Controller
     {
         Airline[] GetAllAirlines( bool _withHidden = true );
 
-        void AddNewAirlaneToDB( String _name );
+        Int32 AddNewAirlaneToDB( String _name );
 
-        void Rename( Int32 _airlineID, String _newName );
-
-        void AddTicket( Ticket _ticket );
+        void AddTicket( Ticket _ticket, Int32 _airlineID );
 
         List< Ticket > GetAvailableTickets( Int32 _airlineID );
     }
