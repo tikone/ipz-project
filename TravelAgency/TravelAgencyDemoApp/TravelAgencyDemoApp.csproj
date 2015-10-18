@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TravelAgencyDemoApp</RootNamespace>
     <AssemblyName>TravelAgencyDemoApp</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -58,6 +58,10 @@
     <ProjectReference Include="..\TravelAgencyModel\TravelAgencyModel.csproj">
       <Project>{acc0a8ff-d9d2-4c7e-8b9e-fe7b42f41661}</Project>
       <Name>TravelAgencyModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TravelAgencyOrm\TravelAgencyOrm.csproj">
+      <Project>{ac68cd51-10f5-48b9-879f-468e28bb62ec}</Project>
+      <Name>TravelAgencyOrm</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

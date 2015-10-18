@@ -9,10 +9,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TravelAgencyOrm</RootNamespace>
     <AssemblyName>TravelAgencyOrm</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -80,7 +81,6 @@
     <Compile Include="Repository Interfaces\ITicketRepository.cs" />
     <Compile Include="Repository Interfaces\ITourRepository.cs" />
     <Compile Include="RepositoryFactory.cs" />
-    <Compile Include="SaveRestoreController.cs" />
     <Compile Include="TravelAgencyDbContext.cs" />
   </ItemGroup>
   <ItemGroup>

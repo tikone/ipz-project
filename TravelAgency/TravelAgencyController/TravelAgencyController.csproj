@@ -33,7 +33,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,17 +49,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller Api\IAirlineController .cs" />
+    <Compile Include="Controller Api\IHotelController.cs" />
     <Compile Include="Controller Api\IManageTourController.cs" />
     <Compile Include="Controller Api\IOrderController.cs" />
+    <Compile Include="Controller Impl\BasicController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller Impl\" />
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TravelAgencyModel\TravelAgencyModel.csproj">
       <Project>{acc0a8ff-d9d2-4c7e-8b9e-fe7b42f41661}</Project>
       <Name>TravelAgencyModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TravelAgencyOrm\TravelAgencyOrm.csproj">
+      <Project>{ac68cd51-10f5-48b9-879f-468e28bb62ec}</Project>
+      <Name>TravelAgencyOrm</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
