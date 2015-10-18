@@ -41,5 +41,10 @@
         {
             return new TicketRepository( dbContext );
         }
+
+        public static ITourOrderRepository CreateTourOrderRepository(TravelAgencyDbContext dbContext)
+        {
+            return new TourOrderRepository(dbContext);
+        }
     }
 }

@@ -57,6 +57,7 @@
     <Compile Include="Controller Impl\HotelController.cs" />
     <Compile Include="Controller Impl\BasicController.cs" />
     <Compile Include="Controller Impl\ManageTourController.cs" />
+    <Compile Include="Controller Impl\OrderController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
