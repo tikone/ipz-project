@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{761F2BCB-D6A9-466A-8EDD-28EC11CF2162}</ProjectGuid>
+    <ProjectGuid>{405CF3BC-477E-4A3D-9053-738F267C00B7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TravelAgencyController</RootNamespace>
-    <AssemblyName>TravelAgencyController</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>TravelAgencyInfrastructure</RootNamespace>
+    <AssemblyName>TravelAgencyInfrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,51 +28,25 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller Api\IAirlineController.cs" />
-    <Compile Include="Controller Api\IHotelController.cs" />
-    <Compile Include="Controller Api\IManageTourController.cs" />
-    <Compile Include="Controller Api\IOrderController.cs" />
-    <Compile Include="Controller Impl\AirlineController.cs" />
-    <Compile Include="Controller Impl\HotelController.cs" />
-    <Compile Include="Controller Impl\BasicController.cs" />
-    <Compile Include="Controller Impl\ManageTourController.cs" />
-    <Compile Include="Controller Impl\OrderController.cs" />
-    <Compile Include="ControllerFactory.cs" />
+    <Compile Include="Agent fakes\EmailAgentFake.cs" />
+    <Compile Include="Agent fakes\PaymentAgentFake.cs" />
+    <Compile Include="Agent interfaces\IEmailAgent.cs" />
+    <Compile Include="Agent interfaces\IPaymentAgent.cs" />
+    <Compile Include="InfrastructureFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TravelAgencyModel\TravelAgencyModel.csproj">
-      <Project>{acc0a8ff-d9d2-4c7e-8b9e-fe7b42f41661}</Project>
-      <Name>TravelAgencyModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TravelAgencyOrm\TravelAgencyOrm.csproj">
-      <Project>{ac68cd51-10f5-48b9-879f-468e28bb62ec}</Project>
-      <Name>TravelAgencyOrm</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
