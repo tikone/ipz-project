@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 using TravelAgencyModel;
 
@@ -7,6 +8,10 @@ namespace TravelAgencyController.Controller
     public interface IManageTourController : IDisposable
     {
         Tour[] GetAllTours ();
+
+        List< Tour > GetAllToursLINQ();
+
+        Tour GetTour( Int32 _id );
 
         Int32 CreateNewTour(
                 String _country

@@ -19,15 +19,23 @@ namespace TravelAgencyController.Controller
         }
 
         public void CreateNewTourOrder(
-                Tour _tour
+                Int32 _id
             , DateTime _dateTime
             , Double _price
             , Int32 _amountPeople
         )
         {
-            var order = new TourOrder( _tour, _dateTime, _price, _amountPeople );
-            m_orderRepository.Add( order );
-            m_orderRepository.Commit();
+            using( var tourController = ControllerFactory.CreateManageTourController() )
+            {
+                var order = new TourOrder(
+                        tourController.GetTour( _id )
+                    ,   _dateTime
+                    ,   _price
+                    ,   _amountPeople
+                );
+                m_orderRepository.Add( order );
+                m_orderRepository.Commit();
+            }
 
         }
 

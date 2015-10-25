@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 using TravelAgencyModel;
 using TravelAgencyOrm;
@@ -16,6 +17,16 @@ namespace TravelAgencyController.Controller
         public Tour[] GetAllTours()
         {
             return m_tourRepository.LoadAll().ToArray();
+        }
+
+        public List< Tour > GetAllToursLINQ()
+        {
+            return m_tourRepository.LoadAll().ToList();
+        }
+
+        public Tour GetTour( Int32 _id )
+        {
+            return m_tourRepository.LoadAll().Where( tour => tour.TourID == _id ) as TravelAgencyModel.Tour;
         }
 
         public Int32 CreateNewTour(

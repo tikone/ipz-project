@@ -10,7 +10,7 @@ namespace TravelAgencyController.Controller
         TourOrder[] GetAllOrders ();
 
         void CreateNewTourOrder(
-                Tour _tour
+                Int32 _tourId
             ,   DateTime _dateTime
             ,   Double _price
             ,   Int32 _amountPeople = 1

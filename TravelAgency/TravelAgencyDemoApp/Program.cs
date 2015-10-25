@@ -1,7 +1,10 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
+using System.Linq;
 
 using TravelAgencyModel;
+using TravelAgencyController.Controller;
 
 namespace TravelAgencyDemoApp
 {
@@ -9,20 +12,91 @@ namespace TravelAgencyDemoApp
     {
         static void Main( string[] args )
         {
-            Program p = new Program();
-            p.fillTestModel();
-            p.generateModelReport();
+            FillTestModel();
+
+            DisplayTours();
+            //DisplayTourOrders();
+
         }
 
-        private void fillTestModel()
+        private static void FillTestModel()
         {
-            //new TestModelGenerator( travelAgency );
+            using( var controller = ControllerFactory.CreateManageTourController() )
+            {
+                AddBeerTour( controller );
+                AddBeachTour(controller);
+            }
         }
 
-        private void generateModelReport()
+        private static void AddBeerTour ( IManageTourController _controller )
         {
-            //ModelReporter reporter = new ModelReporter( Console.Out, travelAgency );
-            //reporter.generate();
+            _controller.CreateNewTour(
+                    @"UA"
+                ,   @"best tour EU"
+                ,   TourType.Beer
+            );
+
+        }
+
+        private static void AddBeachTour(IManageTourController _controller)
+        {
+            _controller.CreateNewTour(
+                    @"UA"
+                ,   @"nice tour"
+                ,   TourType.Beach
+            );
+
+        }
+
+
+        private static void CreateTestOrder1()
+        {
+            using( var controller = ControllerFactory.CreateOrderController() )
+            {
+                var manageController = ControllerFactory.CreateManageTourController();
+
+                var tour = manageController.GetAllToursLINQ().Where(
+                    _tour => _tour.Country.Equals( @"UA" ) && _tour.Description.Equals( @"best tour EU" )
+                );
+
+                controller.CreateNewTourOrder(
+                        tour.First().TourID
+                    ,   new DateTime(2015, 5, 12)
+                    ,   999.99
+                );
+
+            }
+        }
+
+        private static void CreateTestOrder2()
+        {
+            using (var controller = ControllerFactory.CreateOrderController())
+            {
+                var manageController = ControllerFactory.CreateManageTourController();
+
+                var tour = manageController.GetAllToursLINQ().Where(
+                    _tour => _tour.Country.Equals(@"UA") && _tour.Description.Equals(@"nice tour")
+                );
+
+                controller.CreateNewTourOrder(
+                        tour.First().TourID
+                    , new DateTime(2015, 9, 12)
+                    , 339.99
+                );
+
+            }
+        }
+
+        private static void DisplayTours()
+        {
+            using( var manageController = ControllerFactory.CreateManageTourController() )
+            {
+                ReportGenerator generator = new ReportGenerator( Console.Out );
+
+                foreach( var tour in manageController.GetAllTours() )
+                    generator.ShowTour( tour );
+
+            }
         }
 
        private TravelAgency travelAgency = new TravelAgency();

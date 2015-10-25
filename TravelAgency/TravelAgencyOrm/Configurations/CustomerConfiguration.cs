@@ -9,7 +9,7 @@ namespace TravelAgencyOrm.Configurations
     {
         public CustomerConfiguration()
         {
-            HasKey( c => c.CustomerID );
+            HasKey( c => c.ID );
             HasOptional< Account >( c => c.Account );
 
             Property( c => c.Name ).IsRequired();

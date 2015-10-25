@@ -50,11 +50,16 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TravelAgencyController\TravelAgencyController.csproj">
+      <Project>{761f2bcb-d6a9-466a-8edd-28ec11cf2162}</Project>
+      <Name>TravelAgencyController</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TravelAgencyModel\TravelAgencyModel.csproj">
       <Project>{acc0a8ff-d9d2-4c7e-8b9e-fe7b42f41661}</Project>
       <Name>TravelAgencyModel</Name>
