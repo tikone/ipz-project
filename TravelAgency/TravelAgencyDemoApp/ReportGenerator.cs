@@ -35,12 +35,12 @@ namespace TravelAgencyDemoApp
             output.WriteLine();
             output.WriteLine( "===History===" );
             foreach (var tour in _account.History)
-                ShowTourOrdered(tour);
+                ShowTourOrder(tour);
 
             output.WriteLine("\n***End History************************\n");
         }
 
-        public void ShowTourOrdered(TourOrder _tourOrder)
+        public void ShowTourOrder(TourOrder _tourOrder)
         {
             output.WriteLine();
             output.WriteLine("===TourOrder===");

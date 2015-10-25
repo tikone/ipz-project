@@ -15,7 +15,10 @@ namespace TravelAgencyDemoApp
             FillTestModel();
 
             DisplayTours();
-            //DisplayTourOrders();
+
+            CreateTestOrder1();
+
+            DisplayTourOrders();
 
         }
 
@@ -95,6 +98,18 @@ namespace TravelAgencyDemoApp
 
                 foreach( var tour in manageController.GetAllTours() )
                     generator.ShowTour( tour );
+
+            }
+        }
+
+        private static void DisplayTourOrders()
+        {
+            using (var manageController = ControllerFactory.CreateOrderController())
+            {
+                ReportGenerator generator = new ReportGenerator(Console.Out);
+
+                foreach (var tour in manageController.GetAllOrders())
+                    generator.ShowTourOrder(tour);
 
             }
         }
