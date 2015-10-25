@@ -48,16 +48,18 @@ namespace TravelAgencyDemoApp
             output.WriteLine("Date: " + _tourOrder.Date_Time.ToString("d"));
             output.WriteLine("Price: " + _tourOrder.Price);
 
-            foreach (var excursion in _tourOrder.GetExcursion() )
-                ShowExcursion(excursion);
+            ShowTour(_tourOrder.Tour);
 
-            foreach (var room in _tourOrder.Rooms)
-                output.WriteLine( room );
-                //ShowRoom(room);
-
-            foreach (var ticket in _tourOrder.Tickets)
-                output.WriteLine(ticket);
-                //ShowTickets(ticket);
+            //foreach (var excursion in _tourOrder.GetExcursion() )
+            //    ShowExcursion(excursion);
+            //
+            //foreach (var room in _tourOrder.Rooms)
+            //    output.WriteLine( room );
+            //    //ShowRoom(room);
+            //
+            //foreach (var ticket in _tourOrder.Tickets)
+            //    output.WriteLine(ticket);
+            //    //ShowTickets(ticket);
 
 
 

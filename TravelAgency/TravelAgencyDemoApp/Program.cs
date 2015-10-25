@@ -18,6 +18,8 @@ namespace TravelAgencyDemoApp
 
             CreateTestOrder1();
 
+            CreateTestOrder2();
+
             DisplayTourOrders();
 
         }

@@ -26,7 +26,7 @@ namespace TravelAgencyController.Controller
 
         public Tour GetTour( Int32 _id )
         {
-            return m_tourRepository.LoadAll().Where( tour => tour.TourID == _id ) as TravelAgencyModel.Tour;
+            return m_tourRepository.LoadAll().Where( tour => tour.TourID == _id ).ToArray().First();
         }
 
         public Int32 CreateNewTour(

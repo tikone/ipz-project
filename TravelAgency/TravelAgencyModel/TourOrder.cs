@@ -55,7 +55,7 @@ namespace TravelAgencyModel
             )
             {
                 if( _tour == null )
-                    new ArgumentException( @" tour nullptr" );
+                    throw new ArgumentException( @" tour nullptr" );
 
                 this.Tour = _tour;
                 this.Date_Time = _dateTime;
@@ -66,7 +66,7 @@ namespace TravelAgencyModel
                 this.Tickets = new List<Ticket>();
 
                 this.Rooms = new HashSet<Room>();
-                m_excursions = new HashSet<Excursion>();
+                this.m_excursions = new HashSet<Excursion>();
 
             }
 
