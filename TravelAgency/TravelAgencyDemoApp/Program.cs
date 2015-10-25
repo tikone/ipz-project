@@ -110,7 +110,7 @@ namespace TravelAgencyDemoApp
             {
                 ReportGenerator generator = new ReportGenerator(Console.Out);
 
-                foreach (var tour in manageController.GetAllOrders())
+                foreach (var tour in manageController.GetAllOrders() )
                     generator.ShowTourOrder(tour);
 
             }

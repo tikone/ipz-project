@@ -48,8 +48,6 @@ namespace TravelAgencyDemoApp
             output.WriteLine("Date: " + _tourOrder.Date_Time.ToString("d"));
             output.WriteLine("Price: " + _tourOrder.Price);
 
-            ShowTour(_tourOrder.Tour);
-
             //foreach (var excursion in _tourOrder.GetExcursion() )
             //    ShowExcursion(excursion);
             //
