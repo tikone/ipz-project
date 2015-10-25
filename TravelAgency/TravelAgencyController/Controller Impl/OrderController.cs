@@ -19,7 +19,7 @@ namespace TravelAgencyController.Controller
         }
 
         public void CreateNewTourOrder(
-              Int32 _id
+                Int32 _id
             , DateTime _dateTime
             , Double _price
             , Int32 _amountPeople

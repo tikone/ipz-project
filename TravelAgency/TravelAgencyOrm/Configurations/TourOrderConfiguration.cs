@@ -11,9 +11,9 @@ namespace TravelAgencyOrm.Configurations
         {
             HasKey(t => t.TourOrderID);
             HasRequired( t => t.Tour );
-            HasMany<Room>(t => t.Rooms).WithMany();
-            HasMany<Ticket>(t => t.Tickets).WithMany();
-            HasMany<Excursion>(t => t.m_excursions).WithMany();
+            HasMany<Room>(t => t.Rooms).WithOptional();
+            HasMany<Ticket>(t => t.Tickets).WithOptional();
+            HasMany<Excursion>(t => t.m_excursions).WithOptional();
 
             Property(t => t.AmountPeople);
             Property(t => t.Date_Time);
