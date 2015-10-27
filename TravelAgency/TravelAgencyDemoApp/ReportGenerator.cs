@@ -50,16 +50,16 @@ namespace TravelAgencyDemoApp
 
             ShowTour(_tourOrder.Tour);
 
-            //foreach (var excursion in _tourOrder.GetExcursion() )
-            //    ShowExcursion(excursion);
-            //
-            //foreach (var room in _tourOrder.Rooms)
-            //    output.WriteLine( room );
-            //    //ShowRoom(room);
-            //
-            //foreach (var ticket in _tourOrder.Tickets)
-            //    output.WriteLine(ticket);
-            //    //ShowTickets(ticket);
+            foreach (var excursion in _tourOrder.GetExcursion() )
+                ShowExcursion(excursion);
+            
+            foreach (var room in _tourOrder.Rooms)
+                output.WriteLine( room );
+                //ShowRoom(room);
+            
+            foreach (var ticket in _tourOrder.Tickets)
+                output.WriteLine(ticket);
+                //ShowTickets(ticket);
 
 
 
@@ -77,7 +77,7 @@ namespace TravelAgencyDemoApp
             output.WriteLine("Type: " + _tour.Type);
 
 
-            output.WriteLine("\n***End TourOrder************************\n");
+            output.WriteLine("\n***End Tour************************\n");
         }
 
         public void ShowExcursion(Excursion _excursion)

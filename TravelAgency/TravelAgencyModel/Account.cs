@@ -17,7 +17,7 @@ namespace TravelAgencyModel
 
             public int PasswordHash { get; set; }
 
-            public ICollection< TourOrder > History { get; private set; }
+            public virtual ICollection<TourOrder> History { get; private set; }
 
         #endregion
 
@@ -36,7 +36,7 @@ namespace TravelAgencyModel
             PasswordHash = _passwordHash;
         }
 
-        private Account() { }
+        protected Account() { }
 
         public void AddTourOrder(TourOrder _tour)
         {

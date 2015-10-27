@@ -42,7 +42,7 @@ namespace TravelAgencyModel
             this.Reserved = false;
         }
 
-        private Ticket() { }
+        protected Ticket() { }
 
         #region override
 

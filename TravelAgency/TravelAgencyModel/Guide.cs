@@ -12,7 +12,7 @@ namespace TravelAgencyModel
 
             public String Name { get; private set; }
 
-            public HashSet< String > Languages { get; private set; }
+            public virtual HashSet<String> Languages { get; private set; }
 
             public Boolean Available { get; set; }
 
@@ -49,7 +49,7 @@ namespace TravelAgencyModel
                 this.Languages = _lanuage;
             }
 
-            private Guide() { }
+            protected Guide() { }
 
         #endregion
 

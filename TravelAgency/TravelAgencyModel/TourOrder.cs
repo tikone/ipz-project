@@ -18,11 +18,11 @@ namespace TravelAgencyModel
 
             public Double Price { get; set; }
 
-            public List<Ticket> Tickets { get; private set; }
+            public virtual List<Ticket> Tickets { get; private set; }
 
-            public HashSet<Room> Rooms { get; private set; }
+            public virtual HashSet<Room> Rooms { get; private set; }
 
-            public HashSet<Excursion> m_excursions { get; private set; }
+            public virtual HashSet<Excursion> m_excursions { get; private set; }
 
             public Int32 AmountPeople
             {
@@ -35,7 +35,7 @@ namespace TravelAgencyModel
                 }
             }
 
-            public Tour Tour { get; private set; }
+            public virtual Tour Tour { get; private set; }
 
         #endregion
 
@@ -70,7 +70,7 @@ namespace TravelAgencyModel
 
             }
 
-            private TourOrder() {}
+            protected TourOrder() {}
 
         #endregion
 

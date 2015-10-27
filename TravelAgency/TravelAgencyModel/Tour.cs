@@ -14,7 +14,7 @@ namespace TravelAgencyModel
 
             public String Country { get; set; }
 
-            public TourType Type { get; set; }
+            public virtual TourType Type { get; set; }
 
             public String Description { get; set; }
 
@@ -37,7 +37,7 @@ namespace TravelAgencyModel
 
             }
 
-            private Tour() {}
+            protected Tour() {}
 
         #endregion
 

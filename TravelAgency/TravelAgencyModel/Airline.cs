@@ -11,7 +11,7 @@ namespace TravelAgencyModel
 
         public String Name { get; private set; }
 
-        public HashSet<Ticket> Tickets {get; private set; }
+        public virtual HashSet<Ticket> Tickets { get; private set; }
 
         public Airline( String _name )
         {
@@ -22,7 +22,7 @@ namespace TravelAgencyModel
             Tickets = new HashSet< Ticket >();
         }
 
-        private Airline() { }
+        protected Airline() { }
 
         #region public methods
 

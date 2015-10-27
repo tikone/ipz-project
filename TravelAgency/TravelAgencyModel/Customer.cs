@@ -17,11 +17,11 @@ namespace TravelAgencyModel
 
             public string Surname { get; private set; }
 
-            public Account Account { get; private set; }
+            public virtual Account Account { get; private set; }
 
         #endregion
 
-        private Customer() { }
+        protected Customer() { }
 
         public Customer( string _name, string _surname )
         {

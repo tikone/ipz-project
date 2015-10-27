@@ -18,7 +18,7 @@ namespace TravelAgencyModel
 
             public HotelType Type { get; set; }
 
-            public HashSet<Room> Rooms { get; set; }
+            public virtual HashSet<Room> Rooms { get; set; }
 
         #endregion
 
@@ -38,7 +38,7 @@ namespace TravelAgencyModel
                 this.Rooms = _rooms;
             }
 
-            private Hotel() { }
+            protected Hotel() { }
 
         #endregion
 

@@ -18,13 +18,13 @@ namespace TravelAgencyModel
 
             public DateTime Date_Time { get; set; }
 
-            public HashSet<Guide> Guides { get; set; }
+            public virtual HashSet<Guide> Guides { get; set; }
 
         #endregion
 
         #region constructors
 
-            private Excursion() { }
+            protected Excursion() { }
 
             public Excursion(
                     String _name
