@@ -52,14 +52,12 @@ namespace TravelAgencyDemoApp
 
             foreach (var excursion in _tourOrder.GetExcursion() )
                 ShowExcursion(excursion);
-            
+
             foreach (var room in _tourOrder.Rooms)
                 output.WriteLine( room );
-                //ShowRoom(room);
-            
+
             foreach (var ticket in _tourOrder.Tickets)
                 output.WriteLine(ticket);
-                //ShowTickets(ticket);
 
 
 
@@ -119,23 +117,6 @@ namespace TravelAgencyDemoApp
 
             output.WriteLine("\n***End Room************************\n");
         }
-
-        //public void ShowOrderedTours( Tour _tour )
-        //{
-        //    output.WriteLine();
-        //    output.WriteLine( "===Tour Information===" );
-        //    output.WriteLine( "TourDescription: " + _tour.ViewInfo() );
-        //    output.WriteLine( "AmountPeople: " + _tour.AmountPeople );
-        //    output.WriteLine( "Country: " + _tour.Country );
-        //    output.WriteLine( "Date: " + _tour.Date_Time.ToString( "d", culture ) );
-        //    output.WriteLine( "Price: " + _tour.Price );
-
-        //    ShowHotel( _tour.Hotel );
-
-        //    ShowItems( _tour.Tickets, @"Tickets" );
-
-        //    ShowItems( _tour.Rooms, @"Rooms" );
-        //}
 
         public void ShowHotel( Hotel _hotel)
         {
