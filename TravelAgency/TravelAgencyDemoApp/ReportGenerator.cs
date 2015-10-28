@@ -37,7 +37,7 @@ namespace TravelAgencyDemoApp
             foreach (var tour in _account.History)
                 ShowTourOrder(tour);
 
-            output.WriteLine("\n***End History************************\n");
+            output.WriteLine("\n**************End History*************\n");
         }
 
         public void ShowTourOrder(TourOrder _tourOrder)
@@ -61,7 +61,7 @@ namespace TravelAgencyDemoApp
 
 
 
-            output.WriteLine("\n***End TourOrder************************\n");
+            output.WriteLine("\n*************End TourOrder**************\n");
         }
 
         public void ShowTour(Tour _tour)
@@ -75,7 +75,7 @@ namespace TravelAgencyDemoApp
             output.WriteLine("Type: " + _tour.Type);
 
 
-            output.WriteLine("\n***End Tour************************\n");
+            output.WriteLine("\n****************End Tour*****************\n");
         }
 
         public void ShowExcursion(Excursion _excursion)
@@ -88,7 +88,7 @@ namespace TravelAgencyDemoApp
             foreach (var guide in _excursion.Guides)
                 ShowGuide(guide);
 
-            output.WriteLine("\n***End Excursion************************\n");
+            output.WriteLine("\n*************End Excursion**************\n");
         }
 
         public void ShowGuide(Guide _guide)
@@ -103,7 +103,7 @@ namespace TravelAgencyDemoApp
             foreach( var lang in _guide.Languages )
                 output.Write( lang );
 
-            output.WriteLine("\n***End Guide************************\n");
+            output.WriteLine("\n************End Guide**************\n");
         }
 
         public void ShowRoom(Room _room)
@@ -115,7 +115,7 @@ namespace TravelAgencyDemoApp
             output.WriteLine("TypeOfRoom: " + _room.TypeOfRoom);
             output.WriteLine("TypeOfBeds: " + _room.TypeOfBeds);
 
-            output.WriteLine("\n***End Room************************\n");
+            output.WriteLine("\n*************End Room**************\n");
         }
 
         public void ShowHotel( Hotel _hotel)

@@ -193,19 +193,11 @@ namespace TravelAgency.UnitsTests
             )
             {
                 return new Tour( _country, _description, TourType.Beer);
-                /*return
-                    new Tour(
-                            createDateTime()
-                        ,   _price
-                        ,   _country
-                        ,   @"test_tour"
-                        ,   TourType.Beer
-                        ,   _hotel == null
-                            ?   _hotel
-                            :   createHotel()
-                        ,   createAirline()
-                    );*/
             }
+
+        #endregion
+
+        #region TourOrder
 
             public static TourOrder createTourOrder(
                     Tour _tour

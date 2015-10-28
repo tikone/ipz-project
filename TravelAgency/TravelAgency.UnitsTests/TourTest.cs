@@ -38,8 +38,9 @@ namespace TravelAgency.UnitsTests
             [Test]
             public void Description()
             {
-                Assert.True( false );
+                var tour = DefaultCreator.createTour();
 
+                Assert.AreEqual( @"description", tour.Description );
             }
 
 

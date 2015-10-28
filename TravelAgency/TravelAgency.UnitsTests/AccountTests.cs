@@ -33,10 +33,13 @@ namespace TravelAgency.UnitsTests
             public void CheckAddHistory()
             {
                 var account = DefaultCreator.createAccount();
-                var tour = DefaultCreator.createTour();
-                //account.AddTour( tour );
+                var tourOrder = DefaultCreator.createTourOrder(
+                        DefaultCreator.createTour()
+                    ,   DefaultCreator.createCustomer() );
 
-                //Assert.True( account.History.Contains( tour ) );
+                account.AddTourOrder( tourOrder );
+
+                Assert.True( account.History.Contains( tourOrder ) );
             }
 
         #endregion
@@ -89,7 +92,7 @@ namespace TravelAgency.UnitsTests
             public void LoginMustBeLessThen16Symbols()
             {
                 Assert.Throws<ArgumentException>(
-                  () => DefaultCreator.createAccount(@"testTestTestTestTest")
+                  () => DefaultCreator.createAccount( @"testTestTestTestTest" )
                 );  
             }
 
@@ -97,7 +100,7 @@ namespace TravelAgency.UnitsTests
             public void VerifyLoginHaveNonWhitespaceCharacter()
             {
                 Assert.Throws<ArgumentException>(
-                  () => DefaultCreator.createAccount(@"lo gin")
+                  () => DefaultCreator.createAccount( @"lo gin" )
                 );
             }
 
