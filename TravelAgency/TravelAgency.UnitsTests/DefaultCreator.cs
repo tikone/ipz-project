@@ -209,6 +209,7 @@ namespace TravelAgency.UnitsTests
 
             public static TourOrder createTourOrder(
                     Tour _tour
+                ,   Customer _customer
                 ,   Double _price = 999.9
                 ,   Int32 _amountPeople = 1
             )
@@ -218,6 +219,7 @@ namespace TravelAgency.UnitsTests
                             _tour
                         ,   createDateTime()
                         ,   _price
+                        ,   _customer
                         ,   _amountPeople
                     );
             }

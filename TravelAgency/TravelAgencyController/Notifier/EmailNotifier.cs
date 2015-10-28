@@ -60,7 +60,7 @@ namespace TravelAgencyController.Notifier
 
             emailAgent.sendEmail(
                 OperatorEmail,
-                "Tour cancelled",   
+                "Tour cancelled",
                 builder.ToString()
             );
 
@@ -94,7 +94,7 @@ namespace TravelAgencyController.Notifier
             builder.Append( _tour.TourID );
             builder.Append(" .Was set new country: \"");
             builder.Append( _tour.Country );
-            builder.Append("\" succesfully. ");
+            builder.Append( "\" succesfully. " );
 
             emailAgent.sendEmail(
                 OperatorEmail,
@@ -110,7 +110,7 @@ namespace TravelAgencyController.Notifier
             builder.Append( _tour.TourID );
             builder.Append( " .Was set new description: \"" );
             builder.Append( _tour.Description );
-            builder.Append("\" succesfully. ");
+            builder.Append( "\" succesfully. " );
 
             emailAgent.sendEmail(
                 OperatorEmail,
@@ -122,6 +122,5 @@ namespace TravelAgencyController.Notifier
         private IEmailAgent emailAgent;
 
         private static readonly string OperatorEmail = "operator@travelAgency.com";
-        private static readonly string AdministratorEmail = "administrator@travelAgency.com";
     }
 }

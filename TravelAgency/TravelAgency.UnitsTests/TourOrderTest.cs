@@ -21,60 +21,51 @@ namespace TravelAgency.UnitsTests
             [ Test ]
             public void AddExcursion_AddOneExcursion()
             {
-                var tourOrder = DefaultCreator.createTourOrder( DefaultCreator.createTour() );
+                var tourOrder = DefaultCreator.createTourOrder(
+                        DefaultCreator.createTour()
+                    ,   DefaultCreator.createCustomer() );
 
                 var excursion =
-                    DefaultCreator.createExursion(
-                        DefaultCreator.createDateTime()
-                    );
+                    DefaultCreator.createExursion( DefaultCreator.createDateTime() );
 
-                tourOrder.AddExcursion(
-                    excursion
-                );
+                tourOrder.AddExcursion( excursion );
 
-                Assert.IsTrue(tourOrder.GetExcursion().Contains(excursion));
+                Assert.IsTrue( tourOrder.GetExcursion().Contains( excursion ) );
 
             }
 
             [Test]
             public void AddExcursion_AddFewExcursion()
             {
-                var tourOrder = DefaultCreator.createTourOrder(DefaultCreator.createTour());
+                var tourOrder = DefaultCreator.createTourOrder(
+                    DefaultCreator.createTour()
+                ,   DefaultCreator.createCustomer() );
 
-                var excursion1 =
-                    DefaultCreator.createExursion(
-                        DefaultCreator.createDateTime()
-                    );
+                Excursion excursion1 =
+                    DefaultCreator.createExursion( DefaultCreator.createDateTime() );
 
-                var excursion2 =
-                    DefaultCreator.createExursion(
-                        DefaultCreator.createDateTime()
-                );
+                Excursion excursion2 =
+                    DefaultCreator.createExursion( DefaultCreator.createDateTime() );
 
-                tourOrder.AddExcursion(
-                    excursion1
-                );
+                tourOrder.AddExcursion( excursion1 );
+                tourOrder.AddExcursion( excursion2 );
 
-                tourOrder.AddExcursion(
-                    excursion2
-                );
-
-                Assert.IsTrue(tourOrder.GetExcursion().Contains(excursion1));
-                Assert.IsTrue(tourOrder.GetExcursion().Contains(excursion2));
+                Assert.IsTrue( tourOrder.GetExcursion().Contains( excursion1 ) );
+                Assert.IsTrue( tourOrder.GetExcursion().Contains( excursion2 ) );
 
             }
 
             [Test]
             public void AddExcursion_TwiceAddOneExcursion()
             {
-                var tourOrder = DefaultCreator.createTourOrder(DefaultCreator.createTour());
+                var tourOrder = DefaultCreator.createTourOrder(
+                        DefaultCreator.createTour()
+                    ,   DefaultCreator.createCustomer() );
 
-                var excursion =
-                    DefaultCreator.createExursion(
-                        DefaultCreator.createDateTime()
-                    );
+                Excursion excursion =
+                    DefaultCreator.createExursion( DefaultCreator.createDateTime() );
 
-                tourOrder.AddExcursion(excursion);
+                tourOrder.AddExcursion( excursion );
 
                 Assert.Throws<ArgumentException>(
                     () => tourOrder.AddExcursion(excursion)
@@ -84,7 +75,9 @@ namespace TravelAgency.UnitsTests
             [Test]
             public void AddExcursion_DateInTourLessThenDateOfExcursions()
             {
-                var tourOrder = DefaultCreator.createTourOrder(DefaultCreator.createTour());
+                var tourOrder = DefaultCreator.createTourOrder(
+                    DefaultCreator.createTour()
+                ,   DefaultCreator.createCustomer() );
 
                 var excursion =
                     DefaultCreator.createExursion(
@@ -275,7 +268,9 @@ namespace TravelAgency.UnitsTests
             [Test]
             public void CheckDate()
             {
-                var tourOrder = DefaultCreator.createTourOrder(DefaultCreator.createTour());
+                var tourOrder = DefaultCreator.createTourOrder(
+                        DefaultCreator.createTour()
+                    ,   DefaultCreator.createCustomer() );
 
                 Assert.AreEqual(tourOrder.Date_Time, DefaultCreator.createDateTime());
             }
@@ -283,7 +278,10 @@ namespace TravelAgency.UnitsTests
             [Test]
             public void ChangeDate()
             {
-                var tourOrder = DefaultCreator.createTourOrder(DefaultCreator.createTour());
+                var tourOrder = DefaultCreator.createTourOrder(
+                        DefaultCreator.createTour()
+                    ,   DefaultCreator.createCustomer() );
+
                 var date = DefaultCreator.createDateTime( 2015, 5, 17 );
                 tourOrder.Date_Time = date;
 
@@ -304,7 +302,9 @@ namespace TravelAgency.UnitsTests
             [Test]
             public void InitiallyDefaultValueAmountOfPeople()
             {
-                var tourOrder = DefaultCreator.createTourOrder(DefaultCreator.createTour());
+                var tourOrder = DefaultCreator.createTourOrder(
+                    DefaultCreator.createTour()
+                ,   DefaultCreator.createCustomer() );
 
                 Assert.AreEqual(tourOrder.AmountPeople, 1);
             }
@@ -312,7 +312,9 @@ namespace TravelAgency.UnitsTests
             [Test]
             public void ChangeAmmounOfPeopleToNonPositive()
             {
-                var tourOrder = DefaultCreator.createTourOrder(DefaultCreator.createTour());
+                var tourOrder = DefaultCreator.createTourOrder(
+                    DefaultCreator.createTour()
+                ,   DefaultCreator.createCustomer() );
 
                 Assert.Throws<ArgumentException>(
                    () => tourOrder.AmountPeople = -1
@@ -323,7 +325,10 @@ namespace TravelAgency.UnitsTests
             [Test]
             public void ChangeAmountPeople()
             {
-                var tourOrder = DefaultCreator.createTourOrder(DefaultCreator.createTour());
+                var tourOrder = DefaultCreator.createTourOrder(
+                    DefaultCreator.createTour()
+                ,   DefaultCreator.createCustomer() );
+
                 tourOrder.AmountPeople = 2;
 
                 Assert.AreEqual(tourOrder.AmountPeople, 2);
@@ -332,9 +337,11 @@ namespace TravelAgency.UnitsTests
             [Test]
             public void SendingTour()
             {
-                var tourOrder = DefaultCreator.createTourOrder(DefaultCreator.createTour());
+                var tourOrder = DefaultCreator.createTourOrder(
+                    DefaultCreator.createTour()
+                ,   DefaultCreator.createCustomer() );
 
-                var mockHandler = Substitute.For<EventHandler>();
+                var mockHandler = Substitute.For< EventHandler >();
                 tourOrder.SendingTour += mockHandler;
 
                 tourOrder.SendTourForOperator();
