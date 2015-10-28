@@ -3,6 +3,8 @@ using System.Linq;
 
 using TravelAgencyModel;
 using TravelAgencyOrm;
+using TravelAgencyController.Notifier;
+using TravelAgency.Infrastructure;
 
 namespace TravelAgencyController.Controller
 {
@@ -10,7 +12,8 @@ namespace TravelAgencyController.Controller
     {
         public OrderController()
         {
-            this.m_orderRepository = RepositoryFactory.CreateTourOrderRepository(GetDBContext());
+            this.m_orderRepository = RepositoryFactory.CreateTourOrderRepository( GetDBContext() );
+            this.emailNotifier = new EmailNotifier( InfrastructureFactory.CreateEmailAgent() );
         }
 
         public TourOrder[] GetAllOrders()
@@ -20,9 +23,10 @@ namespace TravelAgencyController.Controller
 
         public void CreateNewTourOrder(
                 Int32 _id
-            , DateTime _dateTime
-            , Double _price
-            , Int32 _amountPeople
+            ,   DateTime _dateTime
+            ,   Double _price
+            ,   Customer _customer
+            ,   Int32 _amountPeople
         )
         {
             using( var tourController = ControllerFactory.CreateManageTourController() )
@@ -31,27 +35,37 @@ namespace TravelAgencyController.Controller
                         tourController.GetTour( _id )
                     ,   _dateTime
                     ,   _price
+                    ,   _customer
                     ,   _amountPeople
                 );
                 m_orderRepository.Add( order );
                 m_orderRepository.Commit();
+
+                emailNotifier.SendOrderRegistered( order );
             }
 
         }
 
         public void UpdateDateTime(Int32 _id, DateTime _dateTime)
         {
+            TourOrder tourOrder = FindObjectById<TourOrder>( m_orderRepository, _id );
             FindObjectById< TourOrder >( m_orderRepository, _id ).Date_Time = _dateTime;
             m_orderRepository.Commit();
+
+            emailNotifier.SendDateChanged( tourOrder );
         }
 
         public void DropOrder(Int32 _id)
         {
-            m_orderRepository.Remove( FindObjectById( m_orderRepository, _id ) );
+            TourOrder tourOrder = FindObjectById<TourOrder>(m_orderRepository, _id);
+            m_orderRepository.Remove( tourOrder );
             m_orderRepository.Commit();
+
+            emailNotifier.SendOrderCancelled( tourOrder );
+
         }
 
         private ITourOrderRepository m_orderRepository;
-
+        private EmailNotifier emailNotifier;
     }
 }

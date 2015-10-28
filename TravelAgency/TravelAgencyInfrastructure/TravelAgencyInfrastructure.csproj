@@ -40,9 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agent fakes\EmailAgentFake.cs" />
-    <Compile Include="Agent fakes\PaymentAgentFake.cs" />
     <Compile Include="Agent interfaces\IEmailAgent.cs" />
-    <Compile Include="Agent interfaces\IPaymentAgent.cs" />
     <Compile Include="InfrastructureFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

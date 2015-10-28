@@ -37,6 +37,8 @@ namespace TravelAgencyModel
 
             public virtual Tour Tour { get; private set; }
 
+            public virtual Customer Customer { get; private set; }
+
         #endregion
 
         #region private fields
@@ -51,6 +53,7 @@ namespace TravelAgencyModel
                     Tour _tour
                 ,   DateTime _dateTime
                 ,   Double _price
+                ,   Customer _customer
                 ,   Int32 _amountPeople = 1
             )
             {
@@ -60,6 +63,7 @@ namespace TravelAgencyModel
                 this.Tour = _tour;
                 this.Date_Time = _dateTime;
                 this.Price = _price;
+                this.Customer = _customer;
 
                 this.AmountPeople = _amountPeople;
 

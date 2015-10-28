@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 using TravelAgencyModel;
 using TravelAgencyOrm;
+using TravelAgencyController.Notifier;
+using TravelAgency.Infrastructure;
 
 namespace TravelAgencyController.Controller
 {
@@ -12,6 +14,7 @@ namespace TravelAgencyController.Controller
         public ManageTourController()
         {
             this.m_tourRepository = RepositoryFactory.CreateTourRepository( GetDBContext() );
+            this.emailNotifier = new EmailNotifier( InfrastructureFactory.CreateEmailAgent() );
         }
 
         public Tour[] GetAllTours()
@@ -38,6 +41,9 @@ namespace TravelAgencyController.Controller
             Tour tour = new Tour( _country, _description, _type );
             m_tourRepository.Add( tour );
             m_tourRepository.Commit();
+
+            emailNotifier.SendNewTourCreated( tour );
+
             return tour.TourID;
 
         }
@@ -48,6 +54,9 @@ namespace TravelAgencyController.Controller
 
             tour.Country = _country;
             m_tourRepository.Commit();
+
+            emailNotifier.SendCountryForTourUpdated( tour );
+
         }
 
         public void UpdateDescription(Int32 _id, String _description)
@@ -56,6 +65,8 @@ namespace TravelAgencyController.Controller
 
             tour.Description = _description;
             m_tourRepository.Commit();
+
+            emailNotifier.SendDescriptionForTourUpdated( tour );
         }
 
         public void UpdateType(Int32 _id, TourType _type)
@@ -67,5 +78,6 @@ namespace TravelAgencyController.Controller
         }
 
         private ITourRepository m_tourRepository;
+        private EmailNotifier emailNotifier;
     }
 }

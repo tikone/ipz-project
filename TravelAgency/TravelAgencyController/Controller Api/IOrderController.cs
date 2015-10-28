@@ -13,6 +13,7 @@ namespace TravelAgencyController.Controller
                 Int32 _tourId
             ,   DateTime _dateTime
             ,   Double _price
+            ,   Customer _customer
             ,   Int32 _amountPeople = 1
         );
 

@@ -59,6 +59,7 @@
     <Compile Include="Controller Impl\ManageTourController.cs" />
     <Compile Include="Controller Impl\OrderController.cs" />
     <Compile Include="ControllerFactory.cs" />
+    <Compile Include="Notifier\EmailNotifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +67,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TravelAgencyInfrastructure\TravelAgencyInfrastructure.csproj">
+      <Project>{405cf3bc-477e-4a3d-9053-738f267c00b7}</Project>
+      <Name>TravelAgencyInfrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TravelAgencyModel\TravelAgencyModel.csproj">
       <Project>{acc0a8ff-d9d2-4c7e-8b9e-fe7b42f41661}</Project>
       <Name>TravelAgencyModel</Name>

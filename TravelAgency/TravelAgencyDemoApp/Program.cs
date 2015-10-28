@@ -64,10 +64,13 @@ namespace TravelAgencyDemoApp
                     _tour => _tour.Country.Equals( @"UA" ) && _tour.Description.Equals( @"best tour EU" )
                 );
 
+                var customer = new Customer( "Bolik", "Pupkin" );
+
                 controller.CreateNewTourOrder(
                         tour.First().TourID
                     ,   new DateTime(2015, 5, 12)
                     ,   999.99
+                    ,   customer
                 );
 
             }
@@ -83,10 +86,13 @@ namespace TravelAgencyDemoApp
                     _tour => _tour.Country.Equals(@"UA") && _tour.Description.Equals(@"nice tour")
                 );
 
+                var customer = new Customer( "Lolik", "Pupkin" );
+
                 controller.CreateNewTourOrder(
                         tour.First().TourID
                     , new DateTime(2015, 9, 12)
                     , 339.99
+                    , customer
                 );
 
             }

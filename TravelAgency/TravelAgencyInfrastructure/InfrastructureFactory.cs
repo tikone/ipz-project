@@ -6,10 +6,5 @@
         {
             return new EmailAgentFake();
         }
-
-        public static IPaymentAgent CreatePaymentAgent()
-        {
-            return new PaymentAgentFake();
-        }
     }
 }
