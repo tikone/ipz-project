@@ -61,7 +61,12 @@
     <Compile Include="ControllerFactory.cs" />
     <Compile Include="Notifier\EmailNotifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\AccountView.cs" />
+    <Compile Include="ViewModel\AirlineView.cs" />
     <Compile Include="ViewModel\BasicViewModel.cs" />
+    <Compile Include="ViewModel\CustomerView.cs" />
+    <Compile Include="ViewModel\ExcursionView.cs" />
+    <Compile Include="ViewModel\GuideView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
