@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using TravelAgencyModel;
+using TravelAgencyController.ViewModel;
 
 namespace TravelAgencyController.Controller
 {
@@ -10,6 +11,8 @@ namespace TravelAgencyController.Controller
         Tour[] GetAllTours ();
 
         List< Tour > GetAllToursLINQ();
+
+        ICollection< TourView > ViewAllTours();
 
         Tour GetTour( Int32 _id );
 

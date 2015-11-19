@@ -2,6 +2,8 @@
 using System.IO;
 
 using TravelAgencyConsoleClient;
+using TravelAgencyModel;
+using TravelAgencyController.Controller;
 
 namespace TravelAgencyDemoApp
 {
@@ -9,7 +11,35 @@ namespace TravelAgencyDemoApp
     {
         public static void Main( string[] _args )
         {
+            GenerateInitialContent();
             RunCommandProcessingLoop( System.Console.In, System.Console.Out );
+        }
+
+        private static void GenerateInitialContent()
+        {
+            using( var controller = ControllerFactory.CreateManageTourController() )
+            {
+                AddBeerTour( controller );
+                AddBeachTour( controller );
+            }
+        }
+
+        private static void AddBeerTour( IManageTourController _controller )
+        {
+            _controller.CreateNewTour(
+                    @"UA"
+                ,   @"best tour EU"
+                ,   TourType.Beer
+            );
+        }
+
+        private static void AddBeachTour( IManageTourController _controller )
+        {
+            _controller.CreateNewTour(
+                    @"UA"
+                ,   @"nice tour"
+                ,   TourType.Beach
+            );
         }
 
         private static void RunCommandProcessingLoop( TextReader _input, TextWriter _output )
@@ -40,11 +70,12 @@ namespace TravelAgencyDemoApp
             }
         }
 
-
         private static void InitCommands( CommandHandler _handler, TextWriter _output )
         {
             _handler.RegisterCommand( new HelpCommand( _handler, _output ) );
             _handler.RegisterCommand( new QuitCommand( _output) );
+            _handler.RegisterCommand( new ShowToursCommand( _output ) );
+            _handler.RegisterCommand( new CreateTourCommand(_output) );
         }
     }
 }

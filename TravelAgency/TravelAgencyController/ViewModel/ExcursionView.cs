@@ -15,7 +15,7 @@ namespace TravelAgencyController.ViewModel
 
         public DateTime DateTime { get; set; }
 
-        public ICollection< Guide > Guides { get; set; }
+        public ICollection< GuidesView > Guides { get; set; }
 
         protected override IEnumerable< object > GetAttributesToIncludeInEqualityCheck()
         {

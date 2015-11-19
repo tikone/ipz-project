@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TravelAgencyModel;
 using TravelAgencyOrm;
 using TravelAgencyController.Notifier;
+using TravelAgencyController.ViewModel;
 using TravelAgency.Infrastructure;
 
 namespace TravelAgencyController.Controller
@@ -25,6 +26,12 @@ namespace TravelAgencyController.Controller
         public List< Tour > GetAllToursLINQ()
         {
             return m_tourRepository.LoadAll().ToList();
+        }
+
+        public ICollection< TourView > ViewAllTours()
+        {
+            var query = m_tourRepository.LoadAll();
+            return ViewModelsFactory.BuildViewModels(query, ViewModelsFactory.BuildTourView);
         }
 
         public Tour GetTour( Int32 _id )

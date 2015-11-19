@@ -10,7 +10,7 @@ namespace TravelAgencyController.ViewModel
         public int UserID { get; set; }
         public string Login { get; set; }
         public string Mail { get; set; }
-        public ICollection< TourOrder > History { get; set; }
+        public ICollection< TourOrderView > History { get; set; }
 
         protected override IEnumerable< object > GetAttributesToIncludeInEqualityCheck()
         {

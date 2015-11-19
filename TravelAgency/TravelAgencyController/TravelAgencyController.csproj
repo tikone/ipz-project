@@ -66,6 +66,7 @@
     <Compile Include="ViewModel\BasicViewModel.cs" />
     <Compile Include="ViewModel\CustomerView.cs" />
     <Compile Include="ViewModel\ExcursionView.cs" />
+    <Compile Include="ViewModel\Factory\ViewModelsFactory.cs" />
     <Compile Include="ViewModel\GuideView.cs" />
     <Compile Include="ViewModel\HotelView.cs" />
     <Compile Include="ViewModel\RoomView.cs" />

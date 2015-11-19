@@ -11,7 +11,7 @@ namespace TravelAgencyController.ViewModel
 
         public String Name { get; set; }
 
-        public ICollection< Ticket > Tickets { get; set; }
+        public ICollection< TicketView > Tickets { get; set; }
 
         protected override IEnumerable< object > GetAttributesToIncludeInEqualityCheck()
         {

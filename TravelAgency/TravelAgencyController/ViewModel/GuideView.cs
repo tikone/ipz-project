@@ -5,7 +5,7 @@ using TravelAgencyModel;
 
 namespace TravelAgencyController.ViewModel
 {
-    public class GuidetView : BasicViewModel< GuidetView >
+    public class GuidesView : BasicViewModel< GuidesView >
     {
         public String Name { get; set; }
 

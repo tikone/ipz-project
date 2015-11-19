@@ -6,7 +6,7 @@ namespace TravelAgencyController.ViewModel
     public class RoomView : BasicViewModel<RoomView>
     {
         public Int32 Number { get; set; }
-        public String BedNumber { get; set; }
+        public Int32 BedNumber { get; set; }
         public Boolean Reserved { get; set; }
         public String TypeOfBeds { get; set; }
         public String TypeOfRoom { get; set; }

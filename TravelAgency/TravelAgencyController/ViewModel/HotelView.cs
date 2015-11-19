@@ -9,7 +9,7 @@ namespace TravelAgencyController.ViewModel
         public String Name { get; set; }
         public String Address { get; set; }
         public String HotelType { get; set; }
-        public HashSet<RoomView> Rooms { get; set; }
+        public ICollection< RoomView > Rooms { get; set; }
 
 
         protected override IEnumerable<object> GetAttributesToIncludeInEqualityCheck()

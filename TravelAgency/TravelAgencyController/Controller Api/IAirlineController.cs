@@ -9,7 +9,6 @@ namespace TravelAgencyController.Controller
     {
         Airline[] GetAllAirlines( bool _withHidden = true );
 
-        // Returns ID may be 0 lookup this code, same for hotel
         Int32 AddNewAirlineToDB( String _name );
 
         void RemoveAirlineFromDB( Int32 _airlineID );
