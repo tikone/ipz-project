@@ -87,6 +87,13 @@ namespace TravelAgencyConsoleClient
             throw new Exception( "Switch " + _switchName + " must have a value 'true' or 'false'." );
         }
 
+        public _TEnum GetSwitchAsEnum< _TEnum >( string _switchName )
+        {
+            string switchValue = GetSwitch( _switchName );
+
+            return ( _TEnum ) Enum.Parse( typeof( _TEnum ), switchValue, true );
+        }
+
         public string GetOptionalSwitch( string _switchName )
         {
             string switchValue;

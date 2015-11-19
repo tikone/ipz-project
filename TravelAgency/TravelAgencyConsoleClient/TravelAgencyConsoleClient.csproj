@@ -67,12 +67,14 @@
     <Compile Include="Commands\Basic\CommandHandler.cs" />
     <Compile Include="Commands\Basic\CommandSwitch.cs" />
     <Compile Include="Commands\Basic\CommandSwitchValues.cs" />
+    <Compile Include="Commands\Basic\ConsoleClearCommand.cs" />
     <Compile Include="Commands\Basic\HelpCommand.cs" />
     <Compile Include="Commands\Basic\QuitCommand.cs" />
     <Compile Include="Commands\Tour\CreateTourCommand.cs" />
+    <Compile Include="Commands\Tour\EditTourCommand.cs" />
     <Compile Include="Commands\Tour\ShowToursCommand.cs" />
+    <Compile Include="Commands\Tour\TourCommand.cs" />
     <Compile Include="EntityReference.cs" />
-    <Compile Include="EnumHelper.cs" />
     <Compile Include="ProgramConsole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

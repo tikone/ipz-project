@@ -74,8 +74,10 @@ namespace TravelAgencyDemoApp
         {
             _handler.RegisterCommand( new HelpCommand( _handler, _output ) );
             _handler.RegisterCommand( new QuitCommand( _output) );
+            _handler.RegisterCommand( new ConsoleClearCommand( _output ) );
             _handler.RegisterCommand( new ShowToursCommand( _output ) );
             _handler.RegisterCommand( new CreateTourCommand(_output) );
+            _handler.RegisterCommand( new EditTourCommand( _output ) );
         }
     }
 }

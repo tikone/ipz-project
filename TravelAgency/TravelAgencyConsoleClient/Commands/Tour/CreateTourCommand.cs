@@ -19,7 +19,6 @@ namespace TravelAgencyConsoleClient
         public override void Execute( CommandSwitchValues values )
         {
             string country = values.GetSwitch( "-country" );
-            string type = values.GetSwitch( "-type" );
 
             string description = values.GetOptionalSwitch( "-description" );
             if (description == null)
@@ -30,7 +29,7 @@ namespace TravelAgencyConsoleClient
                 manageTourController.CreateNewTour(
                         country
                     ,   description
-                    ,   EnumHelper.FromString< TourType >( type )
+                    ,   values.GetSwitchAsEnum< TourType >( "-type" )
                );
             }
         }
