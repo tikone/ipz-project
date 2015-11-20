@@ -5,9 +5,9 @@ using TravelAgencyController.Controller;
 
 namespace TravelAgencyConsoleClient
 {
-    class ShowToursCommand : Command
+    class ShowAllToursCommand : Command
     {
-        public ShowToursCommand( TextWriter output )
+        public ShowAllToursCommand( TextWriter output )
             : base( "tour.showall", output )
         {
         }

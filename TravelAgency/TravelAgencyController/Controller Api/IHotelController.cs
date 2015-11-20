@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 
 using TravelAgencyModel;
+using TravelAgencyController.ViewModel;
 
 namespace TravelAgencyController.Controller
 {
     public interface IHotelController : IDisposable
     {
         Hotel[] GetAllHotels(bool _showOnlyWithAvailableTickets = true);
+
+        ICollection< HotelView > ViewAllHotels();
+
+        ICollection< RoomView > ViewAllRooms();
 
         Int32 AddNewHotelToDB(
                 String _name

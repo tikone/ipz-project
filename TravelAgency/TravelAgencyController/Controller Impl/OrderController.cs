@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 using TravelAgencyModel;
 using TravelAgencyOrm;
+using TravelAgencyController.ViewModel;
 using TravelAgencyController.Notifier;
 using TravelAgency.Infrastructure;
 
@@ -19,6 +21,12 @@ namespace TravelAgencyController.Controller
         public TourOrder[] GetAllOrders()
         {
             return m_orderRepository.LoadAll().ToArray();
+        }
+
+        public ICollection< TourOrderView > ViewAllTourOrders()
+        {
+            var query = m_orderRepository.LoadAll();
+            return ViewModelsFactory.BuildViewModels(query, ViewModelsFactory.BuildTourOrderView);
         }
 
         public void CreateNewTourOrder(

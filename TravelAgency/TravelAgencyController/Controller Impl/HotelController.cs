@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 using TravelAgencyOrm;
 using TravelAgencyModel;
+using TravelAgencyController.ViewModel;
 
 namespace TravelAgencyController.Controller
 {
@@ -24,6 +25,18 @@ namespace TravelAgencyController.Controller
                     _whichHasFreeRooms
                 ?   WithFreeFreeRooms( hotels ).ToArray()
                 :   hotels.ToArray();
+        }
+
+        public ICollection< HotelView > ViewAllHotels()
+        {
+            var query = hotelRepository.LoadAll();
+            return ViewModelsFactory.BuildViewModels( query, ViewModelsFactory.BuildHotelView );
+        }
+
+        public ICollection< RoomView > ViewAllRooms()
+        {
+            var query = roomRepository.LoadAll();
+            return ViewModelsFactory.BuildViewModels( query, ViewModelsFactory.BuildRoomView );
         }
 
         public Int32 AddNewHotelToDB(

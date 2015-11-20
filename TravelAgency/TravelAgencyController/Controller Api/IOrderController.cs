@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 
 using TravelAgencyModel;
+using TravelAgencyController.ViewModel;
 
 namespace TravelAgencyController.Controller
 {
@@ -8,6 +10,8 @@ namespace TravelAgencyController.Controller
     {
 
         TourOrder[] GetAllOrders ();
+
+        ICollection< TourOrderView > ViewAllTourOrders();
 
         void CreateNewTourOrder(
                 Int32 _tourId

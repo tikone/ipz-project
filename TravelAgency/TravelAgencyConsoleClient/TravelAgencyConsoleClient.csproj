@@ -63,6 +63,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Airline\AddAirlineToDBCommand.cs" />
+    <Compile Include="Commands\Airline\AirlineAddTicket.cs" />
+    <Compile Include="Commands\Airline\AirlineCommand.cs" />
+    <Compile Include="Commands\Airline\AirlineTicketShowCommand.cs" />
+    <Compile Include="Commands\Airline\RemoveAirlineFromDBCommand.cs" />
+    <Compile Include="Commands\Airline\ShowAirlineCommand.cs" />
+    <Compile Include="Commands\Airline\ShowAvailableTickets.cs" />
     <Compile Include="Commands\Basic\Command.cs" />
     <Compile Include="Commands\Basic\CommandHandler.cs" />
     <Compile Include="Commands\Basic\CommandSwitch.cs" />
@@ -70,10 +77,20 @@
     <Compile Include="Commands\Basic\ConsoleClearCommand.cs" />
     <Compile Include="Commands\Basic\HelpCommand.cs" />
     <Compile Include="Commands\Basic\QuitCommand.cs" />
+    <Compile Include="Commands\Hotel\AddHotelToDBCommand.cs" />
+    <Compile Include="Commands\Hotel\HotelComand.cs" />
+    <Compile Include="Commands\Hotel\RemoveHotelFromDBCommand.cs" />
+    <Compile Include="Commands\Hotel\ShowHotelCommand.cs" />
+    <Compile Include="Commands\TourOrder\DeleteTourOrderCommand.cs" />
+    <Compile Include="Commands\TourOrder\TourOrderChangeDateTimeCommand.cs" />
+    <Compile Include="Commands\TourOrder\ShowTourOrderCommand.cs" />
+    <Compile Include="Commands\TourOrder\TourOrderPriceCommand.cs" />
+    <Compile Include="Commands\TourOrder\TourOrderCommand.cs" />
     <Compile Include="Commands\Tour\CreateTourCommand.cs" />
     <Compile Include="Commands\Tour\EditTourCommand.cs" />
-    <Compile Include="Commands\Tour\ShowToursCommand.cs" />
+    <Compile Include="Commands\Tour\ShowAllToursCommand.cs" />
     <Compile Include="Commands\Tour\TourCommand.cs" />
+    <Compile Include="Commands\Tour\TourShowCommand.cs" />
     <Compile Include="EntityReference.cs" />
     <Compile Include="ProgramConsole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +126,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

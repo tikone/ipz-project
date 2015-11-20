@@ -10,7 +10,7 @@ namespace TravelAgencyOrm.Configurations
         public AirlineConfiguration()
         {
             HasKey( airline => airline.ID );
-            HasMany< Ticket >( airline => airline.Tickets).WithRequired();
+            HasMany<Ticket>(airline => airline.Tickets);
             Property( airline => airline.Name ).IsRequired();
         }
     }

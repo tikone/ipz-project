@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 using TravelAgencyOrm;
 using TravelAgencyModel;
+using TravelAgencyController.ViewModel;
 
 namespace TravelAgencyController.Controller
 {
@@ -17,6 +18,12 @@ namespace TravelAgencyController.Controller
             this.ticketRepository = RepositoryFactory.CreateTicketRepository( GetDBContext() );
         }
 
+        public ICollection< AirlineView > ViewAllAirlines()
+        {
+            var query = airlineRepository.LoadAll();
+            return ViewModelsFactory.BuildViewModels( query, ViewModelsFactory.BuildAirlineView );
+        }
+
         public Airline[] GetAllAirlines( bool _showOnlyWithAvailableTickets )
         {
             var tickets = this.airlineRepository.LoadAll();
@@ -24,6 +31,12 @@ namespace TravelAgencyController.Controller
                     _showOnlyWithAvailableTickets
                 ?   WithAvailableTicketsOnly( tickets ).ToArray()
                 :   tickets.ToArray();
+        }
+
+        public ICollection< TicketView > ViewAllTickets()
+        {
+            var query = ticketRepository.LoadAll();
+            return ViewModelsFactory.BuildViewModels( query, ViewModelsFactory.BuildTicketView );
         }
 
         public Int32 AddNewAirlineToDB( String _name )
@@ -40,6 +53,28 @@ namespace TravelAgencyController.Controller
             Airline airline = FindObjectById( this.airlineRepository, _airlineID );
             this.airlineRepository.Remove( airline );
             this.airlineRepository.Commit();
+        }
+
+        public Int32 CreateNewTicket(
+                DateTime _departure
+            ,   DateTime _arrivalDate
+            ,   String _numberOfAirplane
+            ,   String _arrivalContry
+            ,   TicketType _type )
+        {
+            Ticket ticket = new Ticket( _departure, _arrivalDate, _numberOfAirplane, _arrivalContry, _type );
+            this.ticketRepository.Add( ticket );
+            this.ticketRepository.Commit();
+
+            return ticket.TicketID;
+        }
+
+        public void AddTicket( Int32 _ticketID, Int32 _airlineID )
+        {
+            Airline airline = FindObjectById( this.airlineRepository, _airlineID );
+            Ticket ticket = FindObjectById( this.ticketRepository, _ticketID );
+            airline.AddTicket( ticket );
+            airlineRepository.Commit();
         }
 
         public void AddTicket( Ticket _ticket, Int32 _airlineID )
