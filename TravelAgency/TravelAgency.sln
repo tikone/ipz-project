@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencyInfrastructure"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencyConsoleClient", "TravelAgencyConsoleClient\TravelAgencyConsoleClient.csproj", "{3733FB3A-E7FA-48E5-81C8-1D3CDD2B909F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencyWebApp", "TravelAgencyWebApp\TravelAgencyWebApp.csproj", "{8E5DAFBB-59DC-4AE8-AB54-2D01990DA9E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +109,16 @@ Global
 		{3733FB3A-E7FA-48E5-81C8-1D3CDD2B909F}.Release|ARM.ActiveCfg = Release|Any CPU
 		{3733FB3A-E7FA-48E5-81C8-1D3CDD2B909F}.Release|x64.ActiveCfg = Release|Any CPU
 		{3733FB3A-E7FA-48E5-81C8-1D3CDD2B909F}.Release|x86.ActiveCfg = Release|Any CPU
+		{8E5DAFBB-59DC-4AE8-AB54-2D01990DA9E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E5DAFBB-59DC-4AE8-AB54-2D01990DA9E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E5DAFBB-59DC-4AE8-AB54-2D01990DA9E4}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{8E5DAFBB-59DC-4AE8-AB54-2D01990DA9E4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8E5DAFBB-59DC-4AE8-AB54-2D01990DA9E4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8E5DAFBB-59DC-4AE8-AB54-2D01990DA9E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E5DAFBB-59DC-4AE8-AB54-2D01990DA9E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E5DAFBB-59DC-4AE8-AB54-2D01990DA9E4}.Release|ARM.ActiveCfg = Release|Any CPU
+		{8E5DAFBB-59DC-4AE8-AB54-2D01990DA9E4}.Release|x64.ActiveCfg = Release|Any CPU
+		{8E5DAFBB-59DC-4AE8-AB54-2D01990DA9E4}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

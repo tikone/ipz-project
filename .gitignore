@@ -14,6 +14,8 @@
 /TravelAgency/TravelAgencyOrm/obj
 /TravelAgency/TravelAgencyOrmDemoApp/bin
 /TravelAgency/TravelAgencyOrmDemoApp/obj
+/TravelAgency/TravelAgencyWebApp/bin
+/TravelAgency/TravelAgencyWebApp/obj
 /TravelAgency/packages
 /TravelAgency/.nuget
 /TravelAgency/TravelAgency.UnitsTests/packages.config
