@@ -18,6 +18,8 @@
 /TravelAgency/TravelAgencyWebApp/obj
 /TravelAgency/TravelAgencySeleniumTests/bin
 /TravelAgency/TravelAgencySeleniumTests/obj
+/TravelAgency/TravelAgencyFitNesse/bin
+/TravelAgency/TravelAgencyFitNesse/obj
 /TravelAgency/packages
 /TravelAgency/.nuget
 /TravelAgency/TravelAgency.UnitsTests/packages.config

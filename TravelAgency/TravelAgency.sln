@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencyWebApp", "Trave
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencySeleniumTests", "TravelAgencySeleniumTests\TravelAgencySeleniumTests.csproj", "{0E3C3E95-6E01-497E-A12E-2EFDCFC1A09C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencyFitNesse", "TravelAgencyFitNesse\TravelAgencyFitNesse.csproj", "{0F4DA26A-B760-4F14-9757-0040289C5F46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +133,16 @@ Global
 		{0E3C3E95-6E01-497E-A12E-2EFDCFC1A09C}.Release|ARM.ActiveCfg = Release|Any CPU
 		{0E3C3E95-6E01-497E-A12E-2EFDCFC1A09C}.Release|x64.ActiveCfg = Release|Any CPU
 		{0E3C3E95-6E01-497E-A12E-2EFDCFC1A09C}.Release|x86.ActiveCfg = Release|Any CPU
+		{0F4DA26A-B760-4F14-9757-0040289C5F46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F4DA26A-B760-4F14-9757-0040289C5F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F4DA26A-B760-4F14-9757-0040289C5F46}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{0F4DA26A-B760-4F14-9757-0040289C5F46}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0F4DA26A-B760-4F14-9757-0040289C5F46}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0F4DA26A-B760-4F14-9757-0040289C5F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F4DA26A-B760-4F14-9757-0040289C5F46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F4DA26A-B760-4F14-9757-0040289C5F46}.Release|ARM.ActiveCfg = Release|Any CPU
+		{0F4DA26A-B760-4F14-9757-0040289C5F46}.Release|x64.ActiveCfg = Release|Any CPU
+		{0F4DA26A-B760-4F14-9757-0040289C5F46}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
